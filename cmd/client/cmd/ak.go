@@ -24,13 +24,14 @@ const (
 	FilePrivateKey = "private.key"
 )
 
-/* AK with its directory like:
+/*
+	AK with its directory like:
 
 └── <AK name>
+
 	├── address
 	├── private.key
 	└── public.key
-
 */
 type AK struct {
 	path string
@@ -38,27 +39,30 @@ type AK struct {
 
 // create AK with path
 // Params:
-// 	path: path refers to <AK name>
+//
+//	path: path refers to <AK name>
 func newAK(path string) AK {
 	return AK{
 		path: path,
 	}
 }
 
-/* listAKs lists all AK by root, which could be like:
+/*
+	 listAKs lists all AK by root, which could be like:
 
- └── <root>	// normally as `data`
-	├── keys	// default AK name
-	│	├── address
-	│	├── private.key
-	│	└── public.key
-	├── <AK name>
-	│	├── address
-	│	├── private.key
-	│	└── public.key
-	└── <other dir>
+	 └── <root>	// normally as `data`
+		├── keys	// default AK name
+		│	├── address
+		│	├── private.key
+		│	└── public.key
+		├── <AK name>
+		│	├── address
+		│	├── private.key
+		│	└── public.key
+		└── <other dir>
 
 Params:
+
 	root: root path refers to <root>
 */
 func listAKs(root string) ([]AK, error) {
@@ -119,7 +123,6 @@ func (ak *AK) Info() (info AKInfo, err error) {
 
 // keyPair gets key pair for AK
 func (ak *AK) keyPair() (KeyPair, error) {
-
 	pk, err := readPublicKey(ak.path)
 	if err != nil {
 		return KeyPair{}, err
@@ -152,9 +155,10 @@ type AKInfo struct {
 
 // SignUtxo self signs for an UTXO with given crypto client
 // Params:
-// 	bcName: UTXO blockchain name
-// 	amount: UTXO amount
-// 	crypto: crypto client
+//
+//	bcName: UTXO blockchain name
+//	amount: UTXO amount
+//	crypto: crypto client
 func (i *AKInfo) SignUtxo(bcName string, amount *big.Int, crypto base.CryptoClient) (pb.SignatureInfo, error) {
 	lockedUtxo := models.NewLockedUtxo(bcName, i.address, amount)
 	return i.KeyPair.SignUtxo(lockedUtxo, crypto)
@@ -179,10 +183,10 @@ func (p *KeyPair) SignTx(tx *pb.Transaction, crypto base.CryptoClient) (*pb.Sign
 
 // SignUtxo signs for an UTXO with given crypto client by AK key pair
 // Params:
-// 	utxo: locked UTXO
-// 	crypto: crypto client
+//
+//	utxo: locked UTXO
+//	crypto: crypto client
 func (p *KeyPair) SignUtxo(utxo *models.LockedUtxo, crypto base.CryptoClient) (pb.SignatureInfo, error) {
-
 	// prepare private key
 	ecdsaPrivateKey, err := crypto.GetEcdsaPrivateKeyFromJsonStr(p.secretKey)
 	if err != nil {

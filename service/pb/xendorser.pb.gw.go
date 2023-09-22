@@ -22,11 +22,13 @@ import (
 	"google.golang.org/grpc/status"
 )
 
-var _ codes.Code
-var _ io.Reader
-var _ status.Status
-var _ = runtime.String
-var _ = utilities.NewDoubleArray
+var (
+	_ codes.Code
+	_ io.Reader
+	_ status.Status
+	_ = runtime.String
+	_ = utilities.NewDoubleArray
+)
 
 func request_Xendorser_EndorserCall_0(ctx context.Context, marshaler runtime.Marshaler, client XendorserClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq EndorserRequest
@@ -42,7 +44,6 @@ func request_Xendorser_EndorserCall_0(ctx context.Context, marshaler runtime.Mar
 
 	msg, err := client.EndorserCall(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 // RegisterXendorserHandlerFromEndpoint is same as RegisterXendorserHandler but
@@ -82,7 +83,6 @@ func RegisterXendorserHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
 // "XendorserClient" to call the correct interceptors.
 func RegisterXendorserHandlerClient(ctx context.Context, mux *runtime.ServeMux, client XendorserClient) error {
-
 	mux.Handle("POST", pattern_Xendorser_EndorserCall_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -100,16 +100,11 @@ func RegisterXendorserHandlerClient(ctx context.Context, mux *runtime.ServeMux, 
 		}
 
 		forward_Xendorser_EndorserCall_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	return nil
 }
 
-var (
-	pattern_Xendorser_EndorserCall_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "endorsercall"}, "", runtime.AssumeColonVerbOpt(true)))
-)
+var pattern_Xendorser_EndorserCall_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "endorsercall"}, "", runtime.AssumeColonVerbOpt(true)))
 
-var (
-	forward_Xendorser_EndorserCall_0 = runtime.ForwardResponseMessage
-)
+var forward_Xendorser_EndorserCall_0 = runtime.ForwardResponseMessage

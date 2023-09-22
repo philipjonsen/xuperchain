@@ -22,11 +22,13 @@ import (
 	"google.golang.org/grpc/status"
 )
 
-var _ codes.Code
-var _ io.Reader
-var _ status.Status
-var _ = runtime.String
-var _ = utilities.NewDoubleArray
+var (
+	_ codes.Code
+	_ io.Reader
+	_ status.Status
+	_ = runtime.String
+	_ = utilities.NewDoubleArray
+)
 
 func request_Xchain_SelectUTXOBySize_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq UtxoInput
@@ -42,7 +44,6 @@ func request_Xchain_SelectUTXOBySize_0(ctx context.Context, marshaler runtime.Ma
 
 	msg, err := client.SelectUTXOBySize(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_PostTx_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -59,7 +60,6 @@ func request_Xchain_PostTx_0(ctx context.Context, marshaler runtime.Marshaler, c
 
 	msg, err := client.PostTx(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_QueryACL_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -76,7 +76,6 @@ func request_Xchain_QueryACL_0(ctx context.Context, marshaler runtime.Marshaler,
 
 	msg, err := client.QueryACL(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_QueryUtxoRecord_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -93,7 +92,6 @@ func request_Xchain_QueryUtxoRecord_0(ctx context.Context, marshaler runtime.Mar
 
 	msg, err := client.QueryUtxoRecord(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_QueryContractStatData_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -110,7 +108,6 @@ func request_Xchain_QueryContractStatData_0(ctx context.Context, marshaler runti
 
 	msg, err := client.QueryContractStatData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetAccountContracts_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -127,7 +124,6 @@ func request_Xchain_GetAccountContracts_0(ctx context.Context, marshaler runtime
 
 	msg, err := client.GetAccountContracts(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_QueryTx_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -144,7 +140,6 @@ func request_Xchain_QueryTx_0(ctx context.Context, marshaler runtime.Marshaler, 
 
 	msg, err := client.QueryTx(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetBalance_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -161,7 +156,6 @@ func request_Xchain_GetBalance_0(ctx context.Context, marshaler runtime.Marshale
 
 	msg, err := client.GetBalance(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetBalanceDetail_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -178,7 +172,6 @@ func request_Xchain_GetBalanceDetail_0(ctx context.Context, marshaler runtime.Ma
 
 	msg, err := client.GetBalanceDetail(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetFrozenBalance_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -195,7 +188,6 @@ func request_Xchain_GetFrozenBalance_0(ctx context.Context, marshaler runtime.Ma
 
 	msg, err := client.GetFrozenBalance(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetBlock_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -212,7 +204,6 @@ func request_Xchain_GetBlock_0(ctx context.Context, marshaler runtime.Marshaler,
 
 	msg, err := client.GetBlock(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetBlockByHeight_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -229,7 +220,6 @@ func request_Xchain_GetBlockByHeight_0(ctx context.Context, marshaler runtime.Ma
 
 	msg, err := client.GetBlockByHeight(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetBlockChainStatus_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -246,12 +236,9 @@ func request_Xchain_GetBlockChainStatus_0(ctx context.Context, marshaler runtime
 
 	msg, err := client.GetBlockChainStatus(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
-var (
-	filter_Xchain_GetBlockChains_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
+var filter_Xchain_GetBlockChains_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
 
 func request_Xchain_GetBlockChains_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CommonIn
@@ -266,7 +253,6 @@ func request_Xchain_GetBlockChains_0(ctx context.Context, marshaler runtime.Mars
 
 	msg, err := client.GetBlockChains(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetSystemStatus_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -283,7 +269,6 @@ func request_Xchain_GetSystemStatus_0(ctx context.Context, marshaler runtime.Mar
 
 	msg, err := client.GetSystemStatus(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetConsensusStatus_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -300,7 +285,6 @@ func request_Xchain_GetConsensusStatus_0(ctx context.Context, marshaler runtime.
 
 	msg, err := client.GetConsensusStatus(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_SelectUTXO_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -317,7 +301,6 @@ func request_Xchain_SelectUTXO_0(ctx context.Context, marshaler runtime.Marshale
 
 	msg, err := client.SelectUTXO(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_PreExecWithSelectUTXO_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -334,7 +317,6 @@ func request_Xchain_PreExecWithSelectUTXO_0(ctx context.Context, marshaler runti
 
 	msg, err := client.PreExecWithSelectUTXO(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetAccountByAK_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -351,7 +333,6 @@ func request_Xchain_GetAccountByAK_0(ctx context.Context, marshaler runtime.Mars
 
 	msg, err := client.GetAccountByAK(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_GetAddressContracts_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -368,7 +349,6 @@ func request_Xchain_GetAddressContracts_0(ctx context.Context, marshaler runtime
 
 	msg, err := client.GetAddressContracts(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 func request_Xchain_PreExec_0(ctx context.Context, marshaler runtime.Marshaler, client XchainClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
@@ -385,7 +365,6 @@ func request_Xchain_PreExec_0(ctx context.Context, marshaler runtime.Marshaler, 
 
 	msg, err := client.PreExec(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
-
 }
 
 // RegisterXchainHandlerFromEndpoint is same as RegisterXchainHandler but
@@ -425,7 +404,6 @@ func RegisterXchainHandler(ctx context.Context, mux *runtime.ServeMux, conn *grp
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
 // "XchainClient" to call the correct interceptors.
 func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, client XchainClient) error {
-
 	mux.Handle("POST", pattern_Xchain_SelectUTXOBySize_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -443,7 +421,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_SelectUTXOBySize_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_PostTx_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -463,7 +440,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_PostTx_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_QueryACL_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -483,7 +459,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_QueryACL_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_QueryUtxoRecord_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -503,7 +478,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_QueryUtxoRecord_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_QueryContractStatData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -523,7 +497,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_QueryContractStatData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetAccountContracts_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -543,7 +516,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetAccountContracts_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_QueryTx_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -563,7 +535,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_QueryTx_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetBalance_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -583,7 +554,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBalance_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetBalanceDetail_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -603,7 +573,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBalanceDetail_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetFrozenBalance_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -623,7 +592,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetFrozenBalance_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetBlock_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -643,7 +611,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBlock_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetBlockByHeight_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -663,7 +630,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBlockByHeight_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetBlockChainStatus_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -683,7 +649,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBlockChainStatus_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("GET", pattern_Xchain_GetBlockChains_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -703,7 +668,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetBlockChains_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetSystemStatus_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -723,7 +687,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetSystemStatus_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetConsensusStatus_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -743,7 +706,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetConsensusStatus_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_SelectUTXO_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -763,7 +725,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_SelectUTXO_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_PreExecWithSelectUTXO_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -783,7 +744,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_PreExecWithSelectUTXO_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetAccountByAK_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -803,7 +763,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetAccountByAK_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_GetAddressContracts_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -823,7 +782,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_GetAddressContracts_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	mux.Handle("POST", pattern_Xchain_PreExec_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
@@ -843,7 +801,6 @@ func RegisterXchainHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 		}
 
 		forward_Xchain_PreExec_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
 	})
 
 	return nil

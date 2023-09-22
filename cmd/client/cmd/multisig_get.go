@@ -105,14 +105,14 @@ func (c *GetComplianceCheckSignCommand) get(ctx context.Context) error {
 		TotalNeed: totalNeed.String(),
 		NeedLock:  false,
 	}
-	//选取黄反检查需要的utxo
+	// 选取黄反检查需要的utxo
 	utxoOutput, err := c.cli.XchainClient().SelectUTXO(ctx, utxoInput)
 	if err != nil {
 		fmt.Println("select utxo error", err)
 		return err
 	}
 
-	//组装小费tx
+	// 组装小费tx
 	feeTx, err := ct.GenComplianceCheckTx(utxoOutput)
 	if err != nil {
 		fmt.Println("gen compliance check tx error", err)

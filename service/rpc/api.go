@@ -98,8 +98,8 @@ func (t *RpcServ) PreExec(gctx context.Context, req *pb.InvokeRPCRequest) (*pb.I
 
 // PreExecWithSelectUTXO preExec + selectUtxo
 func (t *RpcServ) PreExecWithSelectUTXO(gctx context.Context,
-	req *pb.PreExecWithSelectUTXORequest) (*pb.PreExecWithSelectUTXOResponse, error) {
-
+	req *pb.PreExecWithSelectUTXORequest,
+) (*pb.PreExecWithSelectUTXOResponse, error) {
 	// 默认响应
 	resp := &pb.PreExecWithSelectUTXOResponse{}
 	// 获取请求上下文，对内传递rctx
@@ -226,7 +226,8 @@ func (t *RpcServ) SelectUTXOBySize(gctx context.Context, req *pb.UtxoInput) (*pb
 
 // QueryContractStatData query statistic info about contract
 func (t *RpcServ) QueryContractStatData(gctx context.Context,
-	req *pb.ContractStatDataRequest) (*pb.ContractStatDataResponse, error) {
+	req *pb.ContractStatDataRequest,
+) (*pb.ContractStatDataResponse, error) {
 	// 默认响应
 	resp := &pb.ContractStatDataResponse{}
 	// 获取请求上下文，对内传递rctx
@@ -259,8 +260,8 @@ func (t *RpcServ) QueryContractStatData(gctx context.Context,
 
 // QueryUtxoRecord query utxo records
 func (t *RpcServ) QueryUtxoRecord(gctx context.Context,
-	req *pb.UtxoRecordDetail) (*pb.UtxoRecordDetail, error) {
-
+	req *pb.UtxoRecordDetail,
+) (*pb.UtxoRecordDetail, error) {
 	// 默认响应
 	resp := &pb.UtxoRecordDetail{}
 	// 获取请求上下文，对内传递rctx

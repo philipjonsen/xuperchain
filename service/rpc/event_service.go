@@ -1,11 +1,10 @@
 package rpc
 
 import (
+	"context"
 	"errors"
 	"net"
 	"sync"
-
-	"context"
 
 	"google.golang.org/grpc/peer"
 

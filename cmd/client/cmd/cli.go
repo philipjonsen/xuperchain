@@ -32,10 +32,8 @@ import (
 // CommandFunc 代表了一个子命令，用于往Cli注册子命令
 type CommandFunc func(c *Cli) *cobra.Command
 
-var (
-	// commands 用于收集所有的子命令，在启动的时候统一往Cli注册
-	Commands []CommandFunc
-)
+// commands 用于收集所有的子命令，在启动的时候统一往Cli注册
+var Commands []CommandFunc
 
 // RootOptions 代表全局通用的flag，可以以嵌套结构体的方式组织flags.
 type RootOptions struct {
@@ -179,7 +177,6 @@ func (c *Cli) GetNodes(ctx context.Context) ([]string, error) {
 
 func genCreds(certPath, serverName string) (credentials.TransportCredentials, error) {
 	bs, err := ioutil.ReadFile(certPath + "/cert.crt")
-
 	if err != nil {
 		return nil, err
 	}
@@ -251,7 +248,6 @@ func (c *Cli) RangeNodes(ctx context.Context, f func(addr string, client pb.Xcha
 
 // Transfer transfer cli entrance
 func (c *Cli) Transfer(ctx context.Context, opt *TransferOptions) (string, error) {
-
 	from := newAK(opt.KeyPath)
 	fromInfo, err := from.Info()
 	if err != nil {
@@ -269,8 +265,8 @@ func (c *Cli) Transfer(ctx context.Context, opt *TransferOptions) (string, error
 }
 
 func (c *Cli) transfer(ctx context.Context, client pb.XchainClient, opt *TransferOptions, initiator AKInfo,
-	cryptoClient base.CryptoClient) (string, error) {
-
+	cryptoClient base.CryptoClient,
+) (string, error) {
 	if opt.From == "" {
 		opt.From = initiator.address
 	}
@@ -278,8 +274,8 @@ func (c *Cli) transfer(ctx context.Context, client pb.XchainClient, opt *Transfe
 }
 
 func (c *Cli) transferSupportAccount(ctx context.Context, client pb.XchainClient, opt *TransferOptions,
-	initiator AKInfo, cryptoClient base.CryptoClient) (string, error) {
-
+	initiator AKInfo, cryptoClient base.CryptoClient,
+) (string, error) {
 	// 组装交易
 	txStatus, err := assembleTxSupportAccount(ctx, client, opt, initiator, cryptoClient)
 	if err != nil {
@@ -322,8 +318,8 @@ func (c *Cli) transferSupportAccount(ctx context.Context, client pb.XchainClient
 }
 
 func assembleTxSupportAccount(ctx context.Context, client pb.XchainClient, opt *TransferOptions, initiator AKInfo,
-	cryptoClient base.CryptoClient) (*pb.TxStatus, error) {
-
+	cryptoClient base.CryptoClient,
+) (*pb.TxStatus, error) {
 	bigZero := big.NewInt(0)
 	totalNeed := big.NewInt(0)
 	tx := &pb.Transaction{
@@ -406,7 +402,6 @@ func assembleTxSupportAccount(ctx context.Context, client pb.XchainClient, opt *
 
 // genAuthRequirement generates auth requirement for AK or Account
 func genAuthRequirement(from, path string) (authRequirements []string, err error) {
-
 	// generate auth requirement for AK: require self
 	if path == "" {
 		authRequirements = []string{from}
@@ -431,8 +426,8 @@ func genAuthRequirement(from, path string) (authRequirements []string, err error
 
 // signTx generates Tx signatures for AK or Account
 func signTx(opt *TransferOptions, crypto base.CryptoClient, tx *pb.Transaction,
-	initiator KeyPair) ([]*pb.SignatureInfo, error) {
-
+	initiator KeyPair,
+) ([]*pb.SignatureInfo, error) {
 	// generate for AK
 	if opt.AccountPath == "" {
 		return signTxForAK(tx, initiator, crypto)
@@ -453,9 +448,11 @@ func signTxForAK(tx *pb.Transaction, keyPair KeyPair, crypto base.CryptoClient) 
 
 // signTxForAccount generates transaction signatures for account: signed by each AK in account path
 // Params:
-// 	tx: transaction
+//
+//	tx: transaction
 //	path: root path for accounts
-// 	crypto: crypto client
+//	crypto: crypto client
+//
 // TODO: is that necessary for all AK
 func signTxForAccount(tx *pb.Transaction, path string, crypto base.CryptoClient) ([]*pb.SignatureInfo, error) {
 	signs := []*pb.SignatureInfo{}
@@ -475,8 +472,8 @@ func signTxForAccount(tx *pb.Transaction, path string, crypto base.CryptoClient)
 }
 
 func assembleTxInputsSupportAccount(ctx context.Context, client pb.XchainClient, opt *TransferOptions,
-	totalNeed *big.Int, initiator AKInfo, crypto base.CryptoClient) ([]*pb.TxInput, *pb.TxOutput, error) {
-
+	totalNeed *big.Int, initiator AKInfo, crypto base.CryptoClient,
+) ([]*pb.TxInput, *pb.TxOutput, error) {
 	ui := &pb.UtxoInput{
 		Bcname:    opt.BlockchainName,
 		Address:   opt.From,

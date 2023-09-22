@@ -46,7 +46,8 @@ func init() {
 
 // loadMultisig loads multisig data from file
 // Params:
-// 	txFile: tx file path
+//
+//	txFile: tx file path
 func loadMultisig(txFile string) (*MultisigData, error) {
 	signData, err := ioutil.ReadFile(txFile + ".ext")
 	if err != nil {

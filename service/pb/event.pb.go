@@ -6,17 +6,20 @@ package pb
 import (
 	context "context"
 	fmt "fmt"
+	math "math"
+
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
+var (
+	_ = proto.Marshal
+	_ = fmt.Errorf
+	_ = math.Inf
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package it is being compiled against.
@@ -65,15 +68,19 @@ func (*SubscribeRequest) Descriptor() ([]byte, []int) {
 func (m *SubscribeRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SubscribeRequest.Unmarshal(m, b)
 }
+
 func (m *SubscribeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SubscribeRequest.Marshal(b, m, deterministic)
 }
+
 func (m *SubscribeRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_SubscribeRequest.Merge(m, src)
 }
+
 func (m *SubscribeRequest) XXX_Size() int {
 	return xxx_messageInfo_SubscribeRequest.Size(m)
 }
+
 func (m *SubscribeRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_SubscribeRequest.DiscardUnknown(m)
 }
@@ -111,15 +118,19 @@ func (*Event) Descriptor() ([]byte, []int) {
 func (m *Event) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Event.Unmarshal(m, b)
 }
+
 func (m *Event) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Event.Marshal(b, m, deterministic)
 }
+
 func (m *Event) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Event.Merge(m, src)
 }
+
 func (m *Event) XXX_Size() int {
 	return xxx_messageInfo_Event.Size(m)
 }
+
 func (m *Event) XXX_DiscardUnknown() {
 	xxx_messageInfo_Event.DiscardUnknown(m)
 }
@@ -151,15 +162,19 @@ func (*BlockRange) Descriptor() ([]byte, []int) {
 func (m *BlockRange) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BlockRange.Unmarshal(m, b)
 }
+
 func (m *BlockRange) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BlockRange.Marshal(b, m, deterministic)
 }
+
 func (m *BlockRange) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BlockRange.Merge(m, src)
 }
+
 func (m *BlockRange) XXX_Size() int {
 	return xxx_messageInfo_BlockRange.Size(m)
 }
+
 func (m *BlockRange) XXX_DiscardUnknown() {
 	xxx_messageInfo_BlockRange.DiscardUnknown(m)
 }
@@ -206,15 +221,19 @@ func (*BlockFilter) Descriptor() ([]byte, []int) {
 func (m *BlockFilter) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BlockFilter.Unmarshal(m, b)
 }
+
 func (m *BlockFilter) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BlockFilter.Marshal(b, m, deterministic)
 }
+
 func (m *BlockFilter) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BlockFilter.Merge(m, src)
 }
+
 func (m *BlockFilter) XXX_Size() int {
 	return xxx_messageInfo_BlockFilter.Size(m)
 }
+
 func (m *BlockFilter) XXX_DiscardUnknown() {
 	xxx_messageInfo_BlockFilter.DiscardUnknown(m)
 }
@@ -309,15 +328,19 @@ func (*FilteredTransaction) Descriptor() ([]byte, []int) {
 func (m *FilteredTransaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_FilteredTransaction.Unmarshal(m, b)
 }
+
 func (m *FilteredTransaction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_FilteredTransaction.Marshal(b, m, deterministic)
 }
+
 func (m *FilteredTransaction) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_FilteredTransaction.Merge(m, src)
 }
+
 func (m *FilteredTransaction) XXX_Size() int {
 	return xxx_messageInfo_FilteredTransaction.Size(m)
 }
+
 func (m *FilteredTransaction) XXX_DiscardUnknown() {
 	xxx_messageInfo_FilteredTransaction.DiscardUnknown(m)
 }
@@ -358,15 +381,19 @@ func (*FilteredBlock) Descriptor() ([]byte, []int) {
 func (m *FilteredBlock) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_FilteredBlock.Unmarshal(m, b)
 }
+
 func (m *FilteredBlock) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_FilteredBlock.Marshal(b, m, deterministic)
 }
+
 func (m *FilteredBlock) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_FilteredBlock.Merge(m, src)
 }
+
 func (m *FilteredBlock) XXX_Size() int {
 	return xxx_messageInfo_FilteredBlock.Size(m)
 }
+
 func (m *FilteredBlock) XXX_DiscardUnknown() {
 	xxx_messageInfo_FilteredBlock.DiscardUnknown(m)
 }
@@ -450,8 +477,10 @@ var fileDescriptor_2d17a9d3f0ddf27e = []byte{
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ context.Context
-var _ grpc.ClientConnInterface
+var (
+	_ context.Context
+	_ grpc.ClientConnInterface
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
@@ -510,8 +539,7 @@ type EventServiceServer interface {
 }
 
 // UnimplementedEventServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedEventServiceServer struct {
-}
+type UnimplementedEventServiceServer struct{}
 
 func (*UnimplementedEventServiceServer) Subscribe(req *SubscribeRequest, srv EventService_SubscribeServer) error {
 	return status.Errorf(codes.Unimplemented, "method Subscribe not implemented")

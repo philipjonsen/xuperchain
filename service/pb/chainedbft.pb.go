@@ -5,14 +5,17 @@ package pb
 
 import (
 	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
 	math "math"
+
+	proto "github.com/golang/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
+var (
+	_ = proto.Marshal
+	_ = fmt.Errorf
+	_ = math.Inf
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package it is being compiled against.
@@ -84,15 +87,19 @@ func (*QuorumCert) Descriptor() ([]byte, []int) {
 func (m *QuorumCert) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_QuorumCert.Unmarshal(m, b)
 }
+
 func (m *QuorumCert) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_QuorumCert.Marshal(b, m, deterministic)
 }
+
 func (m *QuorumCert) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_QuorumCert.Merge(m, src)
 }
+
 func (m *QuorumCert) XXX_Size() int {
 	return xxx_messageInfo_QuorumCert.Size(m)
 }
+
 func (m *QuorumCert) XXX_DiscardUnknown() {
 	xxx_messageInfo_QuorumCert.DiscardUnknown(m)
 }
@@ -156,15 +163,19 @@ func (*QCSignInfos) Descriptor() ([]byte, []int) {
 func (m *QCSignInfos) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_QCSignInfos.Unmarshal(m, b)
 }
+
 func (m *QCSignInfos) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_QCSignInfos.Marshal(b, m, deterministic)
 }
+
 func (m *QCSignInfos) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_QCSignInfos.Merge(m, src)
 }
+
 func (m *QCSignInfos) XXX_Size() int {
 	return xxx_messageInfo_QCSignInfos.Size(m)
 }
+
 func (m *QCSignInfos) XXX_DiscardUnknown() {
 	xxx_messageInfo_QCSignInfos.DiscardUnknown(m)
 }
@@ -198,15 +209,19 @@ func (*SignInfo) Descriptor() ([]byte, []int) {
 func (m *SignInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SignInfo.Unmarshal(m, b)
 }
+
 func (m *SignInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SignInfo.Marshal(b, m, deterministic)
 }
+
 func (m *SignInfo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_SignInfo.Merge(m, src)
 }
+
 func (m *SignInfo) XXX_Size() int {
 	return xxx_messageInfo_SignInfo.Size(m)
 }
+
 func (m *SignInfo) XXX_DiscardUnknown() {
 	xxx_messageInfo_SignInfo.DiscardUnknown(m)
 }
@@ -265,15 +280,19 @@ func (*ChainedBftPhaseMessage) Descriptor() ([]byte, []int) {
 func (m *ChainedBftPhaseMessage) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ChainedBftPhaseMessage.Unmarshal(m, b)
 }
+
 func (m *ChainedBftPhaseMessage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ChainedBftPhaseMessage.Marshal(b, m, deterministic)
 }
+
 func (m *ChainedBftPhaseMessage) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ChainedBftPhaseMessage.Merge(m, src)
 }
+
 func (m *ChainedBftPhaseMessage) XXX_Size() int {
 	return xxx_messageInfo_ChainedBftPhaseMessage.Size(m)
 }
+
 func (m *ChainedBftPhaseMessage) XXX_DiscardUnknown() {
 	xxx_messageInfo_ChainedBftPhaseMessage.DiscardUnknown(m)
 }
@@ -343,15 +362,19 @@ func (*ChainedBftVoteMessage) Descriptor() ([]byte, []int) {
 func (m *ChainedBftVoteMessage) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ChainedBftVoteMessage.Unmarshal(m, b)
 }
+
 func (m *ChainedBftVoteMessage) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ChainedBftVoteMessage.Marshal(b, m, deterministic)
 }
+
 func (m *ChainedBftVoteMessage) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ChainedBftVoteMessage.Merge(m, src)
 }
+
 func (m *ChainedBftVoteMessage) XXX_Size() int {
 	return xxx_messageInfo_ChainedBftVoteMessage.Size(m)
 }
+
 func (m *ChainedBftVoteMessage) XXX_DiscardUnknown() {
 	xxx_messageInfo_ChainedBftVoteMessage.DiscardUnknown(m)
 }

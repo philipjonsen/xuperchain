@@ -29,9 +29,9 @@ import (
 // PruneLedgerCommand prune ledger  cmd
 type PruneLedgerCommand struct {
 	BaseCmd
-	//链名
+	// 链名
 	Name string
-	//裁剪到的目标区块链区块idr
+	// 裁剪到的目标区块链区块idr
 	Target string
 	// 环境配置文件
 	EnvConf string

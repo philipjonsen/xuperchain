@@ -36,7 +36,8 @@ func NewRpcServ(engine ecom.Engine, log logs.Logger) *RpcServ {
 // UnaryInterceptor provides a hook to intercept the execution of a unary RPC on the server.
 func (t *RpcServ) UnaryInterceptor() grpc.UnaryServerInterceptor {
 	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo,
-		handler grpc.UnaryHandler) (respRes interface{}, err error) {
+		handler grpc.UnaryHandler,
+	) (respRes interface{}, err error) {
 		// set request header
 		type HeaderInterface interface {
 			GetHeader() *pb.Header

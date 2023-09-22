@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+
 	"github.com/mitchellh/mapstructure"
 
 	"github.com/xuperchain/xupercore/lib/utils"
