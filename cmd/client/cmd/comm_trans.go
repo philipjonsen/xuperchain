@@ -79,7 +79,8 @@ func (t *CommTrans) GenerateTx(ctx context.Context) (*pb.Transaction, error) {
 
 // GenPreExeRes 得到预执行的结果
 func (t *CommTrans) GenPreExeRes(ctx context.Context) (
-	*pb.InvokeRPCResponse, []*pb.InvokeRequest, error) {
+	*pb.InvokeRPCResponse, []*pb.InvokeRequest, error,
+) {
 	preExeReqs := []*pb.InvokeRequest{}
 	if t.ModuleName != "" {
 		if t.ModuleName == "xkernel" {
@@ -195,7 +196,8 @@ func (t *CommTrans) ReadPreExeReq(buf []byte) (*pb.InvokeRequest, error) {
 
 // GenRawTx 生成一个完整raw的交易
 func (t *CommTrans) GenRawTx(ctx context.Context, desc []byte, preExeRes *pb.InvokeResponse,
-	preExeReqs []*pb.InvokeRequest) (*pb.Transaction, error) {
+	preExeReqs []*pb.InvokeRequest,
+) (*pb.Transaction, error) {
 	tx := &pb.Transaction{
 		Desc:      desc,
 		Coinbase:  false,
@@ -326,7 +328,8 @@ func (t *CommTrans) GenTxOutputs(gasUsed int64) ([]*pb.TxOutput, *big.Int, error
 // GenTxInputs 填充得到transaction的repeated TxInput tx_inputs,
 // 如果输入大于输出，增加一个转给自己(data/keys/)的输入-输出的交易
 func (t *CommTrans) GenTxInputs(ctx context.Context, totalNeed *big.Int) (
-	[]*pb.TxInput, *pb.TxOutput, error) {
+	[]*pb.TxInput, *pb.TxOutput, error,
+) {
 	var fromAddr string
 	var err error
 	if t.From != "" {
@@ -446,7 +449,6 @@ func (t *CommTrans) SendTx(ctx context.Context, tx *pb.Transaction) error {
 
 // signTx generates auth required signatures for transaction according to path
 func (t *CommTrans) signTx(tx *pb.Transaction, path string) ([]*pb.SignatureInfo, error) {
-
 	// generate signature for AK: signed by initiator
 	if path == "" {
 		return t.signTxForInitiator(tx)
@@ -476,7 +478,6 @@ func (t *CommTrans) signTxForInitiator(tx *pb.Transaction) ([]*pb.SignatureInfo,
 
 // signTxForAccount generates transaction signatures for account
 func (t *CommTrans) signTxForAccount(tx *pb.Transaction, path string) ([]*pb.SignatureInfo, error) {
-
 	// create crypto client
 	crypto, err := client.CreateCryptoClient(t.CryptoType)
 	if err != nil {
@@ -526,7 +527,6 @@ func (t *CommTrans) GenerateMultisigGenRawTx(ctx context.Context) error {
 }
 
 func (t *CommTrans) genAuthRequireQuick() ([]string, error) {
-
 	fromAddr, err := readAddress(t.Keys)
 	if err != nil {
 		return nil, err
@@ -689,7 +689,6 @@ func (t *CommTrans) invokeReq() (*pb.InvokeRequest, error) {
 
 // preExecWithSelectUTXOReq generates preExecWithSelectUTXO request
 func (t *CommTrans) preExecWithSelectUTXOReq() (*pb.PreExecWithSelectUTXORequest, error) {
-
 	// prepare request
 	preExeReqs := []*pb.InvokeRequest{}
 	preExeReq, err := t.invokeReq()
@@ -756,8 +755,8 @@ func (t *CommTrans) preExecWithSelectUTXOReq() (*pb.PreExecWithSelectUTXORequest
 }
 
 func (t *CommTrans) GenPreExeWithSelectUtxoRes(ctx context.Context) (
-	*pb.PreExecWithSelectUTXOResponse, error) {
-
+	*pb.PreExecWithSelectUTXOResponse, error,
+) {
 	preSelUTXOReq, err := t.preExecWithSelectUTXOReq()
 	if err != nil {
 		return nil, err
@@ -825,7 +824,8 @@ func (t *CommTrans) GenCompleteTxAndPost(ctx context.Context, preExeResp *pb.Pre
 }
 
 func (t *CommTrans) GenRealTx(response *pb.PreExecWithSelectUTXOResponse,
-	complianceCheckTx *pb.Transaction) (*pb.Transaction, error) {
+	complianceCheckTx *pb.Transaction,
+) (*pb.Transaction, error) {
 	utxolist := []*pb.Utxo{}
 	totalSelected := big.NewInt(0)
 	initiator, err := t.genInitiator()
@@ -979,7 +979,8 @@ func (t *CommTrans) GenerateMultiTxOutputs(selfAmount string, gasUsed string) ([
 }
 
 func (t *CommTrans) GeneratePureTxInputs(utxoOutputs *pb.UtxoOutput) (
-	[]*pb.TxInput, error) {
+	[]*pb.TxInput, error,
+) {
 	// gen txInputs
 	var txInputs []*pb.TxInput
 	for _, utxo := range utxoOutputs.UtxoList {
@@ -995,7 +996,8 @@ func (t *CommTrans) GeneratePureTxInputs(utxoOutputs *pb.UtxoOutput) (
 }
 
 func (t *CommTrans) ComplianceCheck(tx *pb.Transaction, fee *pb.Transaction) (
-	*pb.SignatureInfo, error) {
+	*pb.SignatureInfo, error,
+) {
 	txStatus := &pb.TxStatus{
 		Bcname: t.ChainName,
 		Tx:     tx,
@@ -1094,7 +1096,8 @@ func (t *CommTrans) GenComplianceCheckTx(utxoOutput *pb.UtxoOutput) (*pb.Transac
 }
 
 func (t *CommTrans) GenerateTxInput(utxoOutputs *pb.UtxoOutput, totalNeed *big.Int) (
-	[]*pb.TxInput, *pb.TxOutput, error) {
+	[]*pb.TxInput, *pb.TxOutput, error,
+) {
 	var txInputs []*pb.TxInput
 	var txOutput *pb.TxOutput
 	for _, utxo := range utxoOutputs.UtxoList {
@@ -1175,7 +1178,6 @@ func (t *CommTrans) GenerateTxOutput(to, amount, fee string) ([]*pb.TxOutput, er
 }
 
 func (t *CommTrans) signLockUtxo(utxo *pb.UtxoInput) (pb.SignatureInfo, error) {
-
 	ak := newAK(t.Keys)
 	keyPair, err := ak.keyPair()
 	if err != nil {

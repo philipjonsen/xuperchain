@@ -20,7 +20,7 @@ import (
 // CreateChainCommand create chain cmd
 type CreateChainCommand struct {
 	BaseCmd
-	//链名
+	// 链名
 	Name string
 	// 创世块配置文件
 	GenesisConf string

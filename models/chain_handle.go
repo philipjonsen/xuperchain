@@ -46,7 +46,8 @@ func (h *ChainHandle) SubmitTx(tx *lpb.Transaction) error {
 }
 
 func (h *ChainHandle) PreExec(req []*protos.InvokeRequest,
-	initiator string, authRequires []string) (*protos.InvokeResponse, error) {
+	initiator string, authRequires []string,
+) (*protos.InvokeResponse, error) {
 	return h.chain.PreExec(h.ctx(), req, initiator, authRequires)
 }
 
@@ -55,7 +56,8 @@ func (h *ChainHandle) QueryTx(txId []byte) (*xpb.TxInfo, error) {
 }
 
 func (h *ChainHandle) SelectUtxo(account string, need *big.Int, isLock, isExclude bool,
-	pubKey string, sign []byte) (*lpb.UtxoOutput, error) {
+	pubKey string, sign []byte,
+) (*lpb.UtxoOutput, error) {
 	// 如果需要临时锁定utxo，需要校验权限
 	ok := h.checkSelectUtxoSign(account, pubKey, sign, isLock, need)
 	if !ok {
@@ -68,7 +70,8 @@ func (h *ChainHandle) SelectUtxo(account string, need *big.Int, isLock, isExclud
 }
 
 func (h *ChainHandle) SelectUTXOBySize(account string, isLock, isExclude bool,
-	pubKey string, sign []byte) (*lpb.UtxoOutput, error) {
+	pubKey string, sign []byte,
+) (*lpb.UtxoOutput, error) {
 	// 如果需要临时锁定utxo，需要校验权限
 	ok := h.checkSelectUtxoSign(account, pubKey, sign, isLock, big.NewInt(0))
 	if !ok {
@@ -165,7 +168,8 @@ func (h *ChainHandle) ctx() xCtx.XContext {
 }
 
 func (h *ChainHandle) checkSelectUtxoSign(account, pubKey string, sign []byte,
-	isLock bool, need *big.Int) bool {
+	isLock bool, need *big.Int,
+) bool {
 	// 只对需要临时锁定utxo的校验
 	if aclUtils.IsAccount(account) || !isLock {
 		return true

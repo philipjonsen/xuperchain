@@ -227,7 +227,7 @@ func (c *MultisigSendCommand) sendTx(ctx context.Context, tx *pb.Transaction) (s
 		Txid: tx.Txid,
 	}
 
-	//reply, err := c.cli.XchainClient().Send(ctx, txStatus)
+	// reply, err := c.cli.XchainClient().Send(ctx, txStatus)
 	reply, err := c.cli.XchainClient().PostTx(ctx, txStatus)
 	if err != nil {
 		return "", err

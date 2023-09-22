@@ -6,18 +6,21 @@ package pb
 import (
 	context "context"
 	fmt "fmt"
+	math "math"
+
 	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
+var (
+	_ = proto.Marshal
+	_ = fmt.Errorf
+	_ = math.Inf
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the proto package it is being compiled against.
@@ -346,15 +349,19 @@ func (*Header) Descriptor() ([]byte, []int) {
 func (m *Header) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Header.Unmarshal(m, b)
 }
+
 func (m *Header) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Header.Marshal(b, m, deterministic)
 }
+
 func (m *Header) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Header.Merge(m, src)
 }
+
 func (m *Header) XXX_Size() int {
 	return xxx_messageInfo_Header.Size(m)
 }
+
 func (m *Header) XXX_DiscardUnknown() {
 	xxx_messageInfo_Header.DiscardUnknown(m)
 }
@@ -401,15 +408,19 @@ func (*TxDataAccount) Descriptor() ([]byte, []int) {
 func (m *TxDataAccount) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxDataAccount.Unmarshal(m, b)
 }
+
 func (m *TxDataAccount) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxDataAccount.Marshal(b, m, deterministic)
 }
+
 func (m *TxDataAccount) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxDataAccount.Merge(m, src)
 }
+
 func (m *TxDataAccount) XXX_Size() int {
 	return xxx_messageInfo_TxDataAccount.Size(m)
 }
+
 func (m *TxDataAccount) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxDataAccount.DiscardUnknown(m)
 }
@@ -476,15 +487,19 @@ func (*TxData) Descriptor() ([]byte, []int) {
 func (m *TxData) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxData.Unmarshal(m, b)
 }
+
 func (m *TxData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxData.Marshal(b, m, deterministic)
 }
+
 func (m *TxData) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxData.Merge(m, src)
 }
+
 func (m *TxData) XXX_Size() int {
 	return xxx_messageInfo_TxData.Size(m)
 }
+
 func (m *TxData) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxData.DiscardUnknown(m)
 }
@@ -597,15 +612,19 @@ func (*TxStatus) Descriptor() ([]byte, []int) {
 func (m *TxStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxStatus.Unmarshal(m, b)
 }
+
 func (m *TxStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxStatus.Marshal(b, m, deterministic)
 }
+
 func (m *TxStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxStatus.Merge(m, src)
 }
+
 func (m *TxStatus) XXX_Size() int {
 	return xxx_messageInfo_TxStatus.Size(m)
 }
+
 func (m *TxStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxStatus.DiscardUnknown(m)
 }
@@ -672,15 +691,19 @@ func (*BatchTxs) Descriptor() ([]byte, []int) {
 func (m *BatchTxs) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BatchTxs.Unmarshal(m, b)
 }
+
 func (m *BatchTxs) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BatchTxs.Marshal(b, m, deterministic)
 }
+
 func (m *BatchTxs) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BatchTxs.Merge(m, src)
 }
+
 func (m *BatchTxs) XXX_Size() int {
 	return xxx_messageInfo_BatchTxs.Size(m)
 }
+
 func (m *BatchTxs) XXX_DiscardUnknown() {
 	xxx_messageInfo_BatchTxs.DiscardUnknown(m)
 }
@@ -722,15 +745,19 @@ func (*Block) Descriptor() ([]byte, []int) {
 func (m *Block) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Block.Unmarshal(m, b)
 }
+
 func (m *Block) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Block.Marshal(b, m, deterministic)
 }
+
 func (m *Block) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Block.Merge(m, src)
 }
+
 func (m *Block) XXX_Size() int {
 	return xxx_messageInfo_Block.Size(m)
 }
+
 func (m *Block) XXX_DiscardUnknown() {
 	xxx_messageInfo_Block.DiscardUnknown(m)
 }
@@ -793,15 +820,19 @@ func (*BlockID) Descriptor() ([]byte, []int) {
 func (m *BlockID) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BlockID.Unmarshal(m, b)
 }
+
 func (m *BlockID) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BlockID.Marshal(b, m, deterministic)
 }
+
 func (m *BlockID) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BlockID.Merge(m, src)
 }
+
 func (m *BlockID) XXX_Size() int {
 	return xxx_messageInfo_BlockID.Size(m)
 }
+
 func (m *BlockID) XXX_DiscardUnknown() {
 	xxx_messageInfo_BlockID.DiscardUnknown(m)
 }
@@ -855,15 +886,19 @@ func (*BlockHeight) Descriptor() ([]byte, []int) {
 func (m *BlockHeight) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BlockHeight.Unmarshal(m, b)
 }
+
 func (m *BlockHeight) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BlockHeight.Marshal(b, m, deterministic)
 }
+
 func (m *BlockHeight) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BlockHeight.Merge(m, src)
 }
+
 func (m *BlockHeight) XXX_Size() int {
 	return xxx_messageInfo_BlockHeight.Size(m)
 }
+
 func (m *BlockHeight) XXX_DiscardUnknown() {
 	xxx_messageInfo_BlockHeight.DiscardUnknown(m)
 }
@@ -908,15 +943,19 @@ func (*CommonReply) Descriptor() ([]byte, []int) {
 func (m *CommonReply) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CommonReply.Unmarshal(m, b)
 }
+
 func (m *CommonReply) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CommonReply.Marshal(b, m, deterministic)
 }
+
 func (m *CommonReply) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CommonReply.Merge(m, src)
 }
+
 func (m *CommonReply) XXX_Size() int {
 	return xxx_messageInfo_CommonReply.Size(m)
 }
+
 func (m *CommonReply) XXX_DiscardUnknown() {
 	xxx_messageInfo_CommonReply.DiscardUnknown(m)
 }
@@ -948,15 +987,19 @@ func (*CommonIn) Descriptor() ([]byte, []int) {
 func (m *CommonIn) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CommonIn.Unmarshal(m, b)
 }
+
 func (m *CommonIn) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CommonIn.Marshal(b, m, deterministic)
 }
+
 func (m *CommonIn) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CommonIn.Merge(m, src)
 }
+
 func (m *CommonIn) XXX_Size() int {
 	return xxx_messageInfo_CommonIn.Size(m)
 }
+
 func (m *CommonIn) XXX_DiscardUnknown() {
 	xxx_messageInfo_CommonIn.DiscardUnknown(m)
 }
@@ -996,15 +1039,19 @@ func (*TokenDetail) Descriptor() ([]byte, []int) {
 func (m *TokenDetail) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TokenDetail.Unmarshal(m, b)
 }
+
 func (m *TokenDetail) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TokenDetail.Marshal(b, m, deterministic)
 }
+
 func (m *TokenDetail) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TokenDetail.Merge(m, src)
 }
+
 func (m *TokenDetail) XXX_Size() int {
 	return xxx_messageInfo_TokenDetail.Size(m)
 }
+
 func (m *TokenDetail) XXX_DiscardUnknown() {
 	xxx_messageInfo_TokenDetail.DiscardUnknown(m)
 }
@@ -1051,15 +1098,19 @@ func (*AddressStatus) Descriptor() ([]byte, []int) {
 func (m *AddressStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddressStatus.Unmarshal(m, b)
 }
+
 func (m *AddressStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AddressStatus.Marshal(b, m, deterministic)
 }
+
 func (m *AddressStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AddressStatus.Merge(m, src)
 }
+
 func (m *AddressStatus) XXX_Size() int {
 	return xxx_messageInfo_AddressStatus.Size(m)
 }
+
 func (m *AddressStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_AddressStatus.DiscardUnknown(m)
 }
@@ -1105,15 +1156,19 @@ func (*TokenFrozenDetail) Descriptor() ([]byte, []int) {
 func (m *TokenFrozenDetail) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TokenFrozenDetail.Unmarshal(m, b)
 }
+
 func (m *TokenFrozenDetail) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TokenFrozenDetail.Marshal(b, m, deterministic)
 }
+
 func (m *TokenFrozenDetail) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TokenFrozenDetail.Merge(m, src)
 }
+
 func (m *TokenFrozenDetail) XXX_Size() int {
 	return xxx_messageInfo_TokenFrozenDetail.Size(m)
 }
+
 func (m *TokenFrozenDetail) XXX_DiscardUnknown() {
 	xxx_messageInfo_TokenFrozenDetail.DiscardUnknown(m)
 }
@@ -1153,15 +1208,19 @@ func (*TokenFrozenDetails) Descriptor() ([]byte, []int) {
 func (m *TokenFrozenDetails) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TokenFrozenDetails.Unmarshal(m, b)
 }
+
 func (m *TokenFrozenDetails) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TokenFrozenDetails.Marshal(b, m, deterministic)
 }
+
 func (m *TokenFrozenDetails) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TokenFrozenDetails.Merge(m, src)
 }
+
 func (m *TokenFrozenDetails) XXX_Size() int {
 	return xxx_messageInfo_TokenFrozenDetails.Size(m)
 }
+
 func (m *TokenFrozenDetails) XXX_DiscardUnknown() {
 	xxx_messageInfo_TokenFrozenDetails.DiscardUnknown(m)
 }
@@ -1208,15 +1267,19 @@ func (*AddressBalanceStatus) Descriptor() ([]byte, []int) {
 func (m *AddressBalanceStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddressBalanceStatus.Unmarshal(m, b)
 }
+
 func (m *AddressBalanceStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AddressBalanceStatus.Marshal(b, m, deterministic)
 }
+
 func (m *AddressBalanceStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AddressBalanceStatus.Merge(m, src)
 }
+
 func (m *AddressBalanceStatus) XXX_Size() int {
 	return xxx_messageInfo_AddressBalanceStatus.Size(m)
 }
+
 func (m *AddressBalanceStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_AddressBalanceStatus.DiscardUnknown(m)
 }
@@ -1271,15 +1334,19 @@ func (*TxInput) Descriptor() ([]byte, []int) {
 func (m *TxInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxInput.Unmarshal(m, b)
 }
+
 func (m *TxInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxInput.Marshal(b, m, deterministic)
 }
+
 func (m *TxInput) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxInput.Merge(m, src)
 }
+
 func (m *TxInput) XXX_Size() int {
 	return xxx_messageInfo_TxInput.Size(m)
 }
+
 func (m *TxInput) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxInput.DiscardUnknown(m)
 }
@@ -1344,15 +1411,19 @@ func (*TxOutput) Descriptor() ([]byte, []int) {
 func (m *TxOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxOutput.Unmarshal(m, b)
 }
+
 func (m *TxOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxOutput.Marshal(b, m, deterministic)
 }
+
 func (m *TxOutput) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxOutput.Merge(m, src)
 }
+
 func (m *TxOutput) XXX_Size() int {
 	return xxx_messageInfo_TxOutput.Size(m)
 }
+
 func (m *TxOutput) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxOutput.DiscardUnknown(m)
 }
@@ -1399,15 +1470,19 @@ func (*XuperSignature) Descriptor() ([]byte, []int) {
 func (m *XuperSignature) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_XuperSignature.Unmarshal(m, b)
 }
+
 func (m *XuperSignature) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_XuperSignature.Marshal(b, m, deterministic)
 }
+
 func (m *XuperSignature) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_XuperSignature.Merge(m, src)
 }
+
 func (m *XuperSignature) XXX_Size() int {
 	return xxx_messageInfo_XuperSignature.Size(m)
 }
+
 func (m *XuperSignature) XXX_DiscardUnknown() {
 	xxx_messageInfo_XuperSignature.DiscardUnknown(m)
 }
@@ -1485,15 +1560,19 @@ func (*Transaction) Descriptor() ([]byte, []int) {
 func (m *Transaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Transaction.Unmarshal(m, b)
 }
+
 func (m *Transaction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Transaction.Marshal(b, m, deterministic)
 }
+
 func (m *Transaction) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Transaction.Merge(m, src)
 }
+
 func (m *Transaction) XXX_Size() int {
 	return xxx_messageInfo_Transaction.Size(m)
 }
+
 func (m *Transaction) XXX_DiscardUnknown() {
 	xxx_messageInfo_Transaction.DiscardUnknown(m)
 }
@@ -1670,15 +1749,19 @@ func (*LedgerMeta) Descriptor() ([]byte, []int) {
 func (m *LedgerMeta) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LedgerMeta.Unmarshal(m, b)
 }
+
 func (m *LedgerMeta) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_LedgerMeta.Marshal(b, m, deterministic)
 }
+
 func (m *LedgerMeta) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_LedgerMeta.Merge(m, src)
 }
+
 func (m *LedgerMeta) XXX_Size() int {
 	return xxx_messageInfo_LedgerMeta.Size(m)
 }
+
 func (m *LedgerMeta) XXX_DiscardUnknown() {
 	xxx_messageInfo_LedgerMeta.DiscardUnknown(m)
 }
@@ -1736,15 +1819,19 @@ func (*UtxoMeta) Descriptor() ([]byte, []int) {
 func (m *UtxoMeta) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoMeta.Unmarshal(m, b)
 }
+
 func (m *UtxoMeta) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoMeta.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoMeta) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoMeta.Merge(m, src)
 }
+
 func (m *UtxoMeta) XXX_Size() int {
 	return xxx_messageInfo_UtxoMeta.Size(m)
 }
+
 func (m *UtxoMeta) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoMeta.DiscardUnknown(m)
 }
@@ -1862,15 +1949,19 @@ func (*GasPrice) Descriptor() ([]byte, []int) {
 func (m *GasPrice) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GasPrice.Unmarshal(m, b)
 }
+
 func (m *GasPrice) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GasPrice.Marshal(b, m, deterministic)
 }
+
 func (m *GasPrice) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_GasPrice.Merge(m, src)
 }
+
 func (m *GasPrice) XXX_Size() int {
 	return xxx_messageInfo_GasPrice.Size(m)
 }
+
 func (m *GasPrice) XXX_DiscardUnknown() {
 	xxx_messageInfo_GasPrice.DiscardUnknown(m)
 }
@@ -1960,15 +2051,19 @@ func (*InternalBlock) Descriptor() ([]byte, []int) {
 func (m *InternalBlock) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InternalBlock.Unmarshal(m, b)
 }
+
 func (m *InternalBlock) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InternalBlock.Marshal(b, m, deterministic)
 }
+
 func (m *InternalBlock) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_InternalBlock.Merge(m, src)
 }
+
 func (m *InternalBlock) XXX_Size() int {
 	return xxx_messageInfo_InternalBlock.Size(m)
 }
+
 func (m *InternalBlock) XXX_DiscardUnknown() {
 	xxx_messageInfo_InternalBlock.DiscardUnknown(m)
 }
@@ -2143,15 +2238,19 @@ func (*BCStatus) Descriptor() ([]byte, []int) {
 func (m *BCStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BCStatus.Unmarshal(m, b)
 }
+
 func (m *BCStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BCStatus.Marshal(b, m, deterministic)
 }
+
 func (m *BCStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BCStatus.Merge(m, src)
 }
+
 func (m *BCStatus) XXX_Size() int {
 	return xxx_messageInfo_BCStatus.Size(m)
 }
+
 func (m *BCStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_BCStatus.DiscardUnknown(m)
 }
@@ -2218,15 +2317,19 @@ func (*BCTipStatus) Descriptor() ([]byte, []int) {
 func (m *BCTipStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BCTipStatus.Unmarshal(m, b)
 }
+
 func (m *BCTipStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BCTipStatus.Marshal(b, m, deterministic)
 }
+
 func (m *BCTipStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BCTipStatus.Merge(m, src)
 }
+
 func (m *BCTipStatus) XXX_Size() int {
 	return xxx_messageInfo_BCTipStatus.Size(m)
 }
+
 func (m *BCTipStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_BCTipStatus.DiscardUnknown(m)
 }
@@ -2265,15 +2368,19 @@ func (*BlockChains) Descriptor() ([]byte, []int) {
 func (m *BlockChains) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BlockChains.Unmarshal(m, b)
 }
+
 func (m *BlockChains) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BlockChains.Marshal(b, m, deterministic)
 }
+
 func (m *BlockChains) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BlockChains.Merge(m, src)
 }
+
 func (m *BlockChains) XXX_Size() int {
 	return xxx_messageInfo_BlockChains.Size(m)
 }
+
 func (m *BlockChains) XXX_DiscardUnknown() {
 	xxx_messageInfo_BlockChains.DiscardUnknown(m)
 }
@@ -2312,15 +2419,19 @@ func (*Speeds) Descriptor() ([]byte, []int) {
 func (m *Speeds) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Speeds.Unmarshal(m, b)
 }
+
 func (m *Speeds) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Speeds.Marshal(b, m, deterministic)
 }
+
 func (m *Speeds) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Speeds.Merge(m, src)
 }
+
 func (m *Speeds) XXX_Size() int {
 	return xxx_messageInfo_Speeds.Size(m)
 }
+
 func (m *Speeds) XXX_DiscardUnknown() {
 	xxx_messageInfo_Speeds.DiscardUnknown(m)
 }
@@ -2358,15 +2469,19 @@ func (*BCSpeeds) Descriptor() ([]byte, []int) {
 func (m *BCSpeeds) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BCSpeeds.Unmarshal(m, b)
 }
+
 func (m *BCSpeeds) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BCSpeeds.Marshal(b, m, deterministic)
 }
+
 func (m *BCSpeeds) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_BCSpeeds.Merge(m, src)
 }
+
 func (m *BCSpeeds) XXX_Size() int {
 	return xxx_messageInfo_BCSpeeds.Size(m)
 }
+
 func (m *BCSpeeds) XXX_DiscardUnknown() {
 	xxx_messageInfo_BCSpeeds.DiscardUnknown(m)
 }
@@ -2400,15 +2515,19 @@ func (*SystemsStatus) Descriptor() ([]byte, []int) {
 func (m *SystemsStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SystemsStatus.Unmarshal(m, b)
 }
+
 func (m *SystemsStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SystemsStatus.Marshal(b, m, deterministic)
 }
+
 func (m *SystemsStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_SystemsStatus.Merge(m, src)
 }
+
 func (m *SystemsStatus) XXX_Size() int {
 	return xxx_messageInfo_SystemsStatus.Size(m)
 }
+
 func (m *SystemsStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_SystemsStatus.DiscardUnknown(m)
 }
@@ -2461,15 +2580,19 @@ func (*SystemsStatusReply) Descriptor() ([]byte, []int) {
 func (m *SystemsStatusReply) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SystemsStatusReply.Unmarshal(m, b)
 }
+
 func (m *SystemsStatusReply) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SystemsStatusReply.Marshal(b, m, deterministic)
 }
+
 func (m *SystemsStatusReply) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_SystemsStatusReply.Merge(m, src)
 }
+
 func (m *SystemsStatusReply) XXX_Size() int {
 	return xxx_messageInfo_SystemsStatusReply.Size(m)
 }
+
 func (m *SystemsStatusReply) XXX_DiscardUnknown() {
 	xxx_messageInfo_SystemsStatusReply.DiscardUnknown(m)
 }
@@ -2508,15 +2631,19 @@ func (*ConsensusStatRequest) Descriptor() ([]byte, []int) {
 func (m *ConsensusStatRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ConsensusStatRequest.Unmarshal(m, b)
 }
+
 func (m *ConsensusStatRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ConsensusStatRequest.Marshal(b, m, deterministic)
 }
+
 func (m *ConsensusStatRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ConsensusStatRequest.Merge(m, src)
 }
+
 func (m *ConsensusStatRequest) XXX_Size() int {
 	return xxx_messageInfo_ConsensusStatRequest.Size(m)
 }
+
 func (m *ConsensusStatRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_ConsensusStatRequest.DiscardUnknown(m)
 }
@@ -2563,15 +2690,19 @@ func (*ConsensusStatus) Descriptor() ([]byte, []int) {
 func (m *ConsensusStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ConsensusStatus.Unmarshal(m, b)
 }
+
 func (m *ConsensusStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ConsensusStatus.Marshal(b, m, deterministic)
 }
+
 func (m *ConsensusStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ConsensusStatus.Merge(m, src)
 }
+
 func (m *ConsensusStatus) XXX_Size() int {
 	return xxx_messageInfo_ConsensusStatus.Size(m)
 }
+
 func (m *ConsensusStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_ConsensusStatus.DiscardUnknown(m)
 }
@@ -2632,15 +2763,19 @@ func (*RawUrl) Descriptor() ([]byte, []int) {
 func (m *RawUrl) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RawUrl.Unmarshal(m, b)
 }
+
 func (m *RawUrl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_RawUrl.Marshal(b, m, deterministic)
 }
+
 func (m *RawUrl) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_RawUrl.Merge(m, src)
 }
+
 func (m *RawUrl) XXX_Size() int {
 	return xxx_messageInfo_RawUrl.Size(m)
 }
+
 func (m *RawUrl) XXX_DiscardUnknown() {
 	xxx_messageInfo_RawUrl.DiscardUnknown(m)
 }
@@ -2682,15 +2817,19 @@ func (*Utxo) Descriptor() ([]byte, []int) {
 func (m *Utxo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Utxo.Unmarshal(m, b)
 }
+
 func (m *Utxo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Utxo.Marshal(b, m, deterministic)
 }
+
 func (m *Utxo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Utxo.Merge(m, src)
 }
+
 func (m *Utxo) XXX_Size() int {
 	return xxx_messageInfo_Utxo.Size(m)
 }
+
 func (m *Utxo) XXX_DiscardUnknown() {
 	xxx_messageInfo_Utxo.DiscardUnknown(m)
 }
@@ -2762,15 +2901,19 @@ func (*UtxoInput) Descriptor() ([]byte, []int) {
 func (m *UtxoInput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoInput.Unmarshal(m, b)
 }
+
 func (m *UtxoInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoInput.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoInput) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoInput.Merge(m, src)
 }
+
 func (m *UtxoInput) XXX_Size() int {
 	return xxx_messageInfo_UtxoInput.Size(m)
 }
+
 func (m *UtxoInput) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoInput.DiscardUnknown(m)
 }
@@ -2850,15 +2993,19 @@ func (*UtxoOutput) Descriptor() ([]byte, []int) {
 func (m *UtxoOutput) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoOutput.Unmarshal(m, b)
 }
+
 func (m *UtxoOutput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoOutput.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoOutput) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoOutput.Merge(m, src)
 }
+
 func (m *UtxoOutput) XXX_Size() int {
 	return xxx_messageInfo_UtxoOutput.Size(m)
 }
+
 func (m *UtxoOutput) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoOutput.DiscardUnknown(m)
 }
@@ -2912,15 +3059,19 @@ func (*NativeCodeDesc) Descriptor() ([]byte, []int) {
 func (m *NativeCodeDesc) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NativeCodeDesc.Unmarshal(m, b)
 }
+
 func (m *NativeCodeDesc) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_NativeCodeDesc.Marshal(b, m, deterministic)
 }
+
 func (m *NativeCodeDesc) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_NativeCodeDesc.Merge(m, src)
 }
+
 func (m *NativeCodeDesc) XXX_Size() int {
 	return xxx_messageInfo_NativeCodeDesc.Size(m)
 }
+
 func (m *NativeCodeDesc) XXX_DiscardUnknown() {
 	xxx_messageInfo_NativeCodeDesc.DiscardUnknown(m)
 }
@@ -2983,15 +3134,19 @@ func (*WasmCodeDesc) Descriptor() ([]byte, []int) {
 func (m *WasmCodeDesc) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_WasmCodeDesc.Unmarshal(m, b)
 }
+
 func (m *WasmCodeDesc) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_WasmCodeDesc.Marshal(b, m, deterministic)
 }
+
 func (m *WasmCodeDesc) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_WasmCodeDesc.Merge(m, src)
 }
+
 func (m *WasmCodeDesc) XXX_Size() int {
 	return xxx_messageInfo_WasmCodeDesc.Size(m)
 }
+
 func (m *WasmCodeDesc) XXX_DiscardUnknown() {
 	xxx_messageInfo_WasmCodeDesc.DiscardUnknown(m)
 }
@@ -3052,15 +3207,19 @@ func (*NativeCodeStatus) Descriptor() ([]byte, []int) {
 func (m *NativeCodeStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NativeCodeStatus.Unmarshal(m, b)
 }
+
 func (m *NativeCodeStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_NativeCodeStatus.Marshal(b, m, deterministic)
 }
+
 func (m *NativeCodeStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_NativeCodeStatus.Merge(m, src)
 }
+
 func (m *NativeCodeStatus) XXX_Size() int {
 	return xxx_messageInfo_NativeCodeStatus.Size(m)
 }
+
 func (m *NativeCodeStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_NativeCodeStatus.DiscardUnknown(m)
 }
@@ -3107,15 +3266,19 @@ func (*DposCandidatesRequest) Descriptor() ([]byte, []int) {
 func (m *DposCandidatesRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposCandidatesRequest.Unmarshal(m, b)
 }
+
 func (m *DposCandidatesRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposCandidatesRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposCandidatesRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposCandidatesRequest.Merge(m, src)
 }
+
 func (m *DposCandidatesRequest) XXX_Size() int {
 	return xxx_messageInfo_DposCandidatesRequest.Size(m)
 }
+
 func (m *DposCandidatesRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposCandidatesRequest.DiscardUnknown(m)
 }
@@ -3155,15 +3318,19 @@ func (*DposCandidatesResponse) Descriptor() ([]byte, []int) {
 func (m *DposCandidatesResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposCandidatesResponse.Unmarshal(m, b)
 }
+
 func (m *DposCandidatesResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposCandidatesResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposCandidatesResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposCandidatesResponse.Merge(m, src)
 }
+
 func (m *DposCandidatesResponse) XXX_Size() int {
 	return xxx_messageInfo_DposCandidatesResponse.Size(m)
 }
+
 func (m *DposCandidatesResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposCandidatesResponse.DiscardUnknown(m)
 }
@@ -3204,15 +3371,19 @@ func (*DposNominateRecordsRequest) Descriptor() ([]byte, []int) {
 func (m *DposNominateRecordsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposNominateRecordsRequest.Unmarshal(m, b)
 }
+
 func (m *DposNominateRecordsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposNominateRecordsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposNominateRecordsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposNominateRecordsRequest.Merge(m, src)
 }
+
 func (m *DposNominateRecordsRequest) XXX_Size() int {
 	return xxx_messageInfo_DposNominateRecordsRequest.Size(m)
 }
+
 func (m *DposNominateRecordsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposNominateRecordsRequest.DiscardUnknown(m)
 }
@@ -3259,15 +3430,19 @@ func (*DposNominateInfo) Descriptor() ([]byte, []int) {
 func (m *DposNominateInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposNominateInfo.Unmarshal(m, b)
 }
+
 func (m *DposNominateInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposNominateInfo.Marshal(b, m, deterministic)
 }
+
 func (m *DposNominateInfo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposNominateInfo.Merge(m, src)
 }
+
 func (m *DposNominateInfo) XXX_Size() int {
 	return xxx_messageInfo_DposNominateInfo.Size(m)
 }
+
 func (m *DposNominateInfo) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposNominateInfo.DiscardUnknown(m)
 }
@@ -3307,15 +3482,19 @@ func (*DposNominateRecordsResponse) Descriptor() ([]byte, []int) {
 func (m *DposNominateRecordsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposNominateRecordsResponse.Unmarshal(m, b)
 }
+
 func (m *DposNominateRecordsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposNominateRecordsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposNominateRecordsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposNominateRecordsResponse.Merge(m, src)
 }
+
 func (m *DposNominateRecordsResponse) XXX_Size() int {
 	return xxx_messageInfo_DposNominateRecordsResponse.Size(m)
 }
+
 func (m *DposNominateRecordsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposNominateRecordsResponse.DiscardUnknown(m)
 }
@@ -3356,15 +3535,19 @@ func (*DposNomineeRecordsRequest) Descriptor() ([]byte, []int) {
 func (m *DposNomineeRecordsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposNomineeRecordsRequest.Unmarshal(m, b)
 }
+
 func (m *DposNomineeRecordsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposNomineeRecordsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposNomineeRecordsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposNomineeRecordsRequest.Merge(m, src)
 }
+
 func (m *DposNomineeRecordsRequest) XXX_Size() int {
 	return xxx_messageInfo_DposNomineeRecordsRequest.Size(m)
 }
+
 func (m *DposNomineeRecordsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposNomineeRecordsRequest.DiscardUnknown(m)
 }
@@ -3411,15 +3594,19 @@ func (*DposNomineeRecordsResponse) Descriptor() ([]byte, []int) {
 func (m *DposNomineeRecordsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposNomineeRecordsResponse.Unmarshal(m, b)
 }
+
 func (m *DposNomineeRecordsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposNomineeRecordsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposNomineeRecordsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposNomineeRecordsResponse.Merge(m, src)
 }
+
 func (m *DposNomineeRecordsResponse) XXX_Size() int {
 	return xxx_messageInfo_DposNomineeRecordsResponse.Size(m)
 }
+
 func (m *DposNomineeRecordsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposNomineeRecordsResponse.DiscardUnknown(m)
 }
@@ -3460,15 +3647,19 @@ func (*DposVoteRecordsRequest) Descriptor() ([]byte, []int) {
 func (m *DposVoteRecordsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposVoteRecordsRequest.Unmarshal(m, b)
 }
+
 func (m *DposVoteRecordsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposVoteRecordsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposVoteRecordsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposVoteRecordsRequest.Merge(m, src)
 }
+
 func (m *DposVoteRecordsRequest) XXX_Size() int {
 	return xxx_messageInfo_DposVoteRecordsRequest.Size(m)
 }
+
 func (m *DposVoteRecordsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposVoteRecordsRequest.DiscardUnknown(m)
 }
@@ -3515,15 +3706,19 @@ func (*VoteRecord) Descriptor() ([]byte, []int) {
 func (m *VoteRecord) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_VoteRecord.Unmarshal(m, b)
 }
+
 func (m *VoteRecord) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_VoteRecord.Marshal(b, m, deterministic)
 }
+
 func (m *VoteRecord) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_VoteRecord.Merge(m, src)
 }
+
 func (m *VoteRecord) XXX_Size() int {
 	return xxx_messageInfo_VoteRecord.Size(m)
 }
+
 func (m *VoteRecord) XXX_DiscardUnknown() {
 	xxx_messageInfo_VoteRecord.DiscardUnknown(m)
 }
@@ -3564,15 +3759,19 @@ func (*DposVoteRecordsResponse) Descriptor() ([]byte, []int) {
 func (m *DposVoteRecordsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposVoteRecordsResponse.Unmarshal(m, b)
 }
+
 func (m *DposVoteRecordsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposVoteRecordsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposVoteRecordsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposVoteRecordsResponse.Merge(m, src)
 }
+
 func (m *DposVoteRecordsResponse) XXX_Size() int {
 	return xxx_messageInfo_DposVoteRecordsResponse.Size(m)
 }
+
 func (m *DposVoteRecordsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposVoteRecordsResponse.DiscardUnknown(m)
 }
@@ -3613,15 +3812,19 @@ func (*DposVotedRecordsRequest) Descriptor() ([]byte, []int) {
 func (m *DposVotedRecordsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposVotedRecordsRequest.Unmarshal(m, b)
 }
+
 func (m *DposVotedRecordsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposVotedRecordsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposVotedRecordsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposVotedRecordsRequest.Merge(m, src)
 }
+
 func (m *DposVotedRecordsRequest) XXX_Size() int {
 	return xxx_messageInfo_DposVotedRecordsRequest.Size(m)
 }
+
 func (m *DposVotedRecordsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposVotedRecordsRequest.DiscardUnknown(m)
 }
@@ -3668,15 +3871,19 @@ func (*VotedRecord) Descriptor() ([]byte, []int) {
 func (m *VotedRecord) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_VotedRecord.Unmarshal(m, b)
 }
+
 func (m *VotedRecord) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_VotedRecord.Marshal(b, m, deterministic)
 }
+
 func (m *VotedRecord) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_VotedRecord.Merge(m, src)
 }
+
 func (m *VotedRecord) XXX_Size() int {
 	return xxx_messageInfo_VotedRecord.Size(m)
 }
+
 func (m *VotedRecord) XXX_DiscardUnknown() {
 	xxx_messageInfo_VotedRecord.DiscardUnknown(m)
 }
@@ -3717,15 +3924,19 @@ func (*DposVotedRecordsResponse) Descriptor() ([]byte, []int) {
 func (m *DposVotedRecordsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposVotedRecordsResponse.Unmarshal(m, b)
 }
+
 func (m *DposVotedRecordsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposVotedRecordsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposVotedRecordsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposVotedRecordsResponse.Merge(m, src)
 }
+
 func (m *DposVotedRecordsResponse) XXX_Size() int {
 	return xxx_messageInfo_DposVotedRecordsResponse.Size(m)
 }
+
 func (m *DposVotedRecordsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposVotedRecordsResponse.DiscardUnknown(m)
 }
@@ -3766,15 +3977,19 @@ func (*DposCheckResultsRequest) Descriptor() ([]byte, []int) {
 func (m *DposCheckResultsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposCheckResultsRequest.Unmarshal(m, b)
 }
+
 func (m *DposCheckResultsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposCheckResultsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposCheckResultsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposCheckResultsRequest.Merge(m, src)
 }
+
 func (m *DposCheckResultsRequest) XXX_Size() int {
 	return xxx_messageInfo_DposCheckResultsRequest.Size(m)
 }
+
 func (m *DposCheckResultsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposCheckResultsRequest.DiscardUnknown(m)
 }
@@ -3822,15 +4037,19 @@ func (*DposCheckResultsResponse) Descriptor() ([]byte, []int) {
 func (m *DposCheckResultsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposCheckResultsResponse.Unmarshal(m, b)
 }
+
 func (m *DposCheckResultsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposCheckResultsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposCheckResultsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposCheckResultsResponse.Merge(m, src)
 }
+
 func (m *DposCheckResultsResponse) XXX_Size() int {
 	return xxx_messageInfo_DposCheckResultsResponse.Size(m)
 }
+
 func (m *DposCheckResultsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposCheckResultsResponse.DiscardUnknown(m)
 }
@@ -3877,15 +4096,19 @@ func (*DposStatusRequest) Descriptor() ([]byte, []int) {
 func (m *DposStatusRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposStatusRequest.Unmarshal(m, b)
 }
+
 func (m *DposStatusRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposStatusRequest.Marshal(b, m, deterministic)
 }
+
 func (m *DposStatusRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposStatusRequest.Merge(m, src)
 }
+
 func (m *DposStatusRequest) XXX_Size() int {
 	return xxx_messageInfo_DposStatusRequest.Size(m)
 }
+
 func (m *DposStatusRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposStatusRequest.DiscardUnknown(m)
 }
@@ -3925,15 +4148,19 @@ func (*DposStatusResponse) Descriptor() ([]byte, []int) {
 func (m *DposStatusResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposStatusResponse.Unmarshal(m, b)
 }
+
 func (m *DposStatusResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposStatusResponse.Marshal(b, m, deterministic)
 }
+
 func (m *DposStatusResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposStatusResponse.Merge(m, src)
 }
+
 func (m *DposStatusResponse) XXX_Size() int {
 	return xxx_messageInfo_DposStatusResponse.Size(m)
 }
+
 func (m *DposStatusResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposStatusResponse.DiscardUnknown(m)
 }
@@ -3975,15 +4202,19 @@ func (*DposStatus) Descriptor() ([]byte, []int) {
 func (m *DposStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DposStatus.Unmarshal(m, b)
 }
+
 func (m *DposStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DposStatus.Marshal(b, m, deterministic)
 }
+
 func (m *DposStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_DposStatus.Merge(m, src)
 }
+
 func (m *DposStatus) XXX_Size() int {
 	return xxx_messageInfo_DposStatus.Size(m)
 }
+
 func (m *DposStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_DposStatus.DiscardUnknown(m)
 }
@@ -4046,15 +4277,19 @@ func (*InvokeRPCRequest) Descriptor() ([]byte, []int) {
 func (m *InvokeRPCRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvokeRPCRequest.Unmarshal(m, b)
 }
+
 func (m *InvokeRPCRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InvokeRPCRequest.Marshal(b, m, deterministic)
 }
+
 func (m *InvokeRPCRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_InvokeRPCRequest.Merge(m, src)
 }
+
 func (m *InvokeRPCRequest) XXX_Size() int {
 	return xxx_messageInfo_InvokeRPCRequest.Size(m)
 }
+
 func (m *InvokeRPCRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_InvokeRPCRequest.DiscardUnknown(m)
 }
@@ -4115,15 +4350,19 @@ func (*InvokeRPCResponse) Descriptor() ([]byte, []int) {
 func (m *InvokeRPCResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvokeRPCResponse.Unmarshal(m, b)
 }
+
 func (m *InvokeRPCResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InvokeRPCResponse.Marshal(b, m, deterministic)
 }
+
 func (m *InvokeRPCResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_InvokeRPCResponse.Merge(m, src)
 }
+
 func (m *InvokeRPCResponse) XXX_Size() int {
 	return xxx_messageInfo_InvokeRPCResponse.Size(m)
 }
+
 func (m *InvokeRPCResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_InvokeRPCResponse.DiscardUnknown(m)
 }
@@ -4176,15 +4415,19 @@ func (*InvokeRequest) Descriptor() ([]byte, []int) {
 func (m *InvokeRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvokeRequest.Unmarshal(m, b)
 }
+
 func (m *InvokeRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InvokeRequest.Marshal(b, m, deterministic)
 }
+
 func (m *InvokeRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_InvokeRequest.Merge(m, src)
 }
+
 func (m *InvokeRequest) XXX_Size() int {
 	return xxx_messageInfo_InvokeRequest.Size(m)
 }
+
 func (m *InvokeRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_InvokeRequest.DiscardUnknown(m)
 }
@@ -4258,15 +4501,19 @@ func (*InvokeResponse) Descriptor() ([]byte, []int) {
 func (m *InvokeResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvokeResponse.Unmarshal(m, b)
 }
+
 func (m *InvokeResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_InvokeResponse.Marshal(b, m, deterministic)
 }
+
 func (m *InvokeResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_InvokeResponse.Merge(m, src)
 }
+
 func (m *InvokeResponse) XXX_Size() int {
 	return xxx_messageInfo_InvokeResponse.Size(m)
 }
+
 func (m *InvokeResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_InvokeResponse.DiscardUnknown(m)
 }
@@ -4350,15 +4597,19 @@ func (*TxInputExt) Descriptor() ([]byte, []int) {
 func (m *TxInputExt) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxInputExt.Unmarshal(m, b)
 }
+
 func (m *TxInputExt) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxInputExt.Marshal(b, m, deterministic)
 }
+
 func (m *TxInputExt) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxInputExt.Merge(m, src)
 }
+
 func (m *TxInputExt) XXX_Size() int {
 	return xxx_messageInfo_TxInputExt.Size(m)
 }
+
 func (m *TxInputExt) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxInputExt.DiscardUnknown(m)
 }
@@ -4413,15 +4664,19 @@ func (*TxOutputExt) Descriptor() ([]byte, []int) {
 func (m *TxOutputExt) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TxOutputExt.Unmarshal(m, b)
 }
+
 func (m *TxOutputExt) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TxOutputExt.Marshal(b, m, deterministic)
 }
+
 func (m *TxOutputExt) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_TxOutputExt.Merge(m, src)
 }
+
 func (m *TxOutputExt) XXX_Size() int {
 	return xxx_messageInfo_TxOutputExt.Size(m)
 }
+
 func (m *TxOutputExt) XXX_DiscardUnknown() {
 	xxx_messageInfo_TxOutputExt.DiscardUnknown(m)
 }
@@ -4468,15 +4723,19 @@ func (*SignatureInfo) Descriptor() ([]byte, []int) {
 func (m *SignatureInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SignatureInfo.Unmarshal(m, b)
 }
+
 func (m *SignatureInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SignatureInfo.Marshal(b, m, deterministic)
 }
+
 func (m *SignatureInfo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_SignatureInfo.Merge(m, src)
 }
+
 func (m *SignatureInfo) XXX_Size() int {
 	return xxx_messageInfo_SignatureInfo.Size(m)
 }
+
 func (m *SignatureInfo) XXX_DiscardUnknown() {
 	xxx_messageInfo_SignatureInfo.DiscardUnknown(m)
 }
@@ -4515,15 +4774,19 @@ func (*PermissionModel) Descriptor() ([]byte, []int) {
 func (m *PermissionModel) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PermissionModel.Unmarshal(m, b)
 }
+
 func (m *PermissionModel) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PermissionModel.Marshal(b, m, deterministic)
 }
+
 func (m *PermissionModel) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_PermissionModel.Merge(m, src)
 }
+
 func (m *PermissionModel) XXX_Size() int {
 	return xxx_messageInfo_PermissionModel.Size(m)
 }
+
 func (m *PermissionModel) XXX_DiscardUnknown() {
 	xxx_messageInfo_PermissionModel.DiscardUnknown(m)
 }
@@ -4562,15 +4825,19 @@ func (*AkSet) Descriptor() ([]byte, []int) {
 func (m *AkSet) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AkSet.Unmarshal(m, b)
 }
+
 func (m *AkSet) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AkSet.Marshal(b, m, deterministic)
 }
+
 func (m *AkSet) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AkSet.Merge(m, src)
 }
+
 func (m *AkSet) XXX_Size() int {
 	return xxx_messageInfo_AkSet.Size(m)
 }
+
 func (m *AkSet) XXX_DiscardUnknown() {
 	xxx_messageInfo_AkSet.DiscardUnknown(m)
 }
@@ -4602,15 +4869,19 @@ func (*AkSets) Descriptor() ([]byte, []int) {
 func (m *AkSets) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AkSets.Unmarshal(m, b)
 }
+
 func (m *AkSets) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AkSets.Marshal(b, m, deterministic)
 }
+
 func (m *AkSets) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AkSets.Merge(m, src)
 }
+
 func (m *AkSets) XXX_Size() int {
 	return xxx_messageInfo_AkSets.Size(m)
 }
+
 func (m *AkSets) XXX_DiscardUnknown() {
 	xxx_messageInfo_AkSets.DiscardUnknown(m)
 }
@@ -4651,15 +4922,19 @@ func (*Acl) Descriptor() ([]byte, []int) {
 func (m *Acl) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Acl.Unmarshal(m, b)
 }
+
 func (m *Acl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Acl.Marshal(b, m, deterministic)
 }
+
 func (m *Acl) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_Acl.Merge(m, src)
 }
+
 func (m *Acl) XXX_Size() int {
 	return xxx_messageInfo_Acl.Size(m)
 }
+
 func (m *Acl) XXX_DiscardUnknown() {
 	xxx_messageInfo_Acl.DiscardUnknown(m)
 }
@@ -4711,15 +4986,19 @@ func (*AclStatus) Descriptor() ([]byte, []int) {
 func (m *AclStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AclStatus.Unmarshal(m, b)
 }
+
 func (m *AclStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AclStatus.Marshal(b, m, deterministic)
 }
+
 func (m *AclStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AclStatus.Merge(m, src)
 }
+
 func (m *AclStatus) XXX_Size() int {
 	return xxx_messageInfo_AclStatus.Size(m)
 }
+
 func (m *AclStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_AclStatus.DiscardUnknown(m)
 }
@@ -4797,15 +5076,19 @@ func (*IdentityAuth) Descriptor() ([]byte, []int) {
 func (m *IdentityAuth) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_IdentityAuth.Unmarshal(m, b)
 }
+
 func (m *IdentityAuth) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_IdentityAuth.Marshal(b, m, deterministic)
 }
+
 func (m *IdentityAuth) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_IdentityAuth.Merge(m, src)
 }
+
 func (m *IdentityAuth) XXX_Size() int {
 	return xxx_messageInfo_IdentityAuth.Size(m)
 }
+
 func (m *IdentityAuth) XXX_DiscardUnknown() {
 	xxx_messageInfo_IdentityAuth.DiscardUnknown(m)
 }
@@ -4865,15 +5148,19 @@ func (*IdentityAuths) Descriptor() ([]byte, []int) {
 func (m *IdentityAuths) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_IdentityAuths.Unmarshal(m, b)
 }
+
 func (m *IdentityAuths) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_IdentityAuths.Marshal(b, m, deterministic)
 }
+
 func (m *IdentityAuths) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_IdentityAuths.Merge(m, src)
 }
+
 func (m *IdentityAuths) XXX_Size() int {
 	return xxx_messageInfo_IdentityAuths.Size(m)
 }
+
 func (m *IdentityAuths) XXX_DiscardUnknown() {
 	xxx_messageInfo_IdentityAuths.DiscardUnknown(m)
 }
@@ -4905,15 +5192,19 @@ func (*ResourceLimit) Descriptor() ([]byte, []int) {
 func (m *ResourceLimit) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ResourceLimit.Unmarshal(m, b)
 }
+
 func (m *ResourceLimit) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ResourceLimit.Marshal(b, m, deterministic)
 }
+
 func (m *ResourceLimit) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ResourceLimit.Merge(m, src)
 }
+
 func (m *ResourceLimit) XXX_Size() int {
 	return xxx_messageInfo_ResourceLimit.Size(m)
 }
+
 func (m *ResourceLimit) XXX_DiscardUnknown() {
 	xxx_messageInfo_ResourceLimit.DiscardUnknown(m)
 }
@@ -4953,15 +5244,19 @@ func (*AK2AccountRequest) Descriptor() ([]byte, []int) {
 func (m *AK2AccountRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AK2AccountRequest.Unmarshal(m, b)
 }
+
 func (m *AK2AccountRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AK2AccountRequest.Marshal(b, m, deterministic)
 }
+
 func (m *AK2AccountRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AK2AccountRequest.Merge(m, src)
 }
+
 func (m *AK2AccountRequest) XXX_Size() int {
 	return xxx_messageInfo_AK2AccountRequest.Size(m)
 }
+
 func (m *AK2AccountRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_AK2AccountRequest.DiscardUnknown(m)
 }
@@ -5008,15 +5303,19 @@ func (*AK2AccountResponse) Descriptor() ([]byte, []int) {
 func (m *AK2AccountResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AK2AccountResponse.Unmarshal(m, b)
 }
+
 func (m *AK2AccountResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AK2AccountResponse.Marshal(b, m, deterministic)
 }
+
 func (m *AK2AccountResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AK2AccountResponse.Merge(m, src)
 }
+
 func (m *AK2AccountResponse) XXX_Size() int {
 	return xxx_messageInfo_AK2AccountResponse.Size(m)
 }
+
 func (m *AK2AccountResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_AK2AccountResponse.DiscardUnknown(m)
 }
@@ -5064,15 +5363,19 @@ func (*GetAccountContractsRequest) Descriptor() ([]byte, []int) {
 func (m *GetAccountContractsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAccountContractsRequest.Unmarshal(m, b)
 }
+
 func (m *GetAccountContractsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAccountContractsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *GetAccountContractsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_GetAccountContractsRequest.Merge(m, src)
 }
+
 func (m *GetAccountContractsRequest) XXX_Size() int {
 	return xxx_messageInfo_GetAccountContractsRequest.Size(m)
 }
+
 func (m *GetAccountContractsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_GetAccountContractsRequest.DiscardUnknown(m)
 }
@@ -5119,15 +5422,19 @@ func (*GetAccountContractsResponse) Descriptor() ([]byte, []int) {
 func (m *GetAccountContractsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetAccountContractsResponse.Unmarshal(m, b)
 }
+
 func (m *GetAccountContractsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetAccountContractsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *GetAccountContractsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_GetAccountContractsResponse.Merge(m, src)
 }
+
 func (m *GetAccountContractsResponse) XXX_Size() int {
 	return xxx_messageInfo_GetAccountContractsResponse.Size(m)
 }
+
 func (m *GetAccountContractsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_GetAccountContractsResponse.DiscardUnknown(m)
 }
@@ -5171,15 +5478,19 @@ func (*ContractStatus) Descriptor() ([]byte, []int) {
 func (m *ContractStatus) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractStatus.Unmarshal(m, b)
 }
+
 func (m *ContractStatus) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractStatus.Marshal(b, m, deterministic)
 }
+
 func (m *ContractStatus) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractStatus.Merge(m, src)
 }
+
 func (m *ContractStatus) XXX_Size() int {
 	return xxx_messageInfo_ContractStatus.Size(m)
 }
+
 func (m *ContractStatus) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractStatus.DiscardUnknown(m)
 }
@@ -5252,15 +5563,19 @@ func (*PreExecWithSelectUTXORequest) Descriptor() ([]byte, []int) {
 func (m *PreExecWithSelectUTXORequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PreExecWithSelectUTXORequest.Unmarshal(m, b)
 }
+
 func (m *PreExecWithSelectUTXORequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PreExecWithSelectUTXORequest.Marshal(b, m, deterministic)
 }
+
 func (m *PreExecWithSelectUTXORequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_PreExecWithSelectUTXORequest.Merge(m, src)
 }
+
 func (m *PreExecWithSelectUTXORequest) XXX_Size() int {
 	return xxx_messageInfo_PreExecWithSelectUTXORequest.Size(m)
 }
+
 func (m *PreExecWithSelectUTXORequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_PreExecWithSelectUTXORequest.DiscardUnknown(m)
 }
@@ -5338,15 +5653,19 @@ func (*PreExecWithSelectUTXOResponse) Descriptor() ([]byte, []int) {
 func (m *PreExecWithSelectUTXOResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PreExecWithSelectUTXOResponse.Unmarshal(m, b)
 }
+
 func (m *PreExecWithSelectUTXOResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_PreExecWithSelectUTXOResponse.Marshal(b, m, deterministic)
 }
+
 func (m *PreExecWithSelectUTXOResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_PreExecWithSelectUTXOResponse.Merge(m, src)
 }
+
 func (m *PreExecWithSelectUTXOResponse) XXX_Size() int {
 	return xxx_messageInfo_PreExecWithSelectUTXOResponse.Size(m)
 }
+
 func (m *PreExecWithSelectUTXOResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_PreExecWithSelectUTXOResponse.DiscardUnknown(m)
 }
@@ -5401,15 +5720,19 @@ func (*ContractResponse) Descriptor() ([]byte, []int) {
 func (m *ContractResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractResponse.Unmarshal(m, b)
 }
+
 func (m *ContractResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractResponse.Marshal(b, m, deterministic)
 }
+
 func (m *ContractResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractResponse.Merge(m, src)
 }
+
 func (m *ContractResponse) XXX_Size() int {
 	return xxx_messageInfo_ContractResponse.Size(m)
 }
+
 func (m *ContractResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractResponse.DiscardUnknown(m)
 }
@@ -5463,15 +5786,19 @@ func (*ModifyBlock) Descriptor() ([]byte, []int) {
 func (m *ModifyBlock) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ModifyBlock.Unmarshal(m, b)
 }
+
 func (m *ModifyBlock) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ModifyBlock.Marshal(b, m, deterministic)
 }
+
 func (m *ModifyBlock) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ModifyBlock.Merge(m, src)
 }
+
 func (m *ModifyBlock) XXX_Size() int {
 	return xxx_messageInfo_ModifyBlock.Size(m)
 }
+
 func (m *ModifyBlock) XXX_DiscardUnknown() {
 	xxx_messageInfo_ModifyBlock.DiscardUnknown(m)
 }
@@ -5533,15 +5860,19 @@ func (*HDInfo) Descriptor() ([]byte, []int) {
 func (m *HDInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_HDInfo.Unmarshal(m, b)
 }
+
 func (m *HDInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_HDInfo.Marshal(b, m, deterministic)
 }
+
 func (m *HDInfo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_HDInfo.Merge(m, src)
 }
+
 func (m *HDInfo) XXX_Size() int {
 	return xxx_messageInfo_HDInfo.Size(m)
 }
+
 func (m *HDInfo) XXX_DiscardUnknown() {
 	xxx_messageInfo_HDInfo.DiscardUnknown(m)
 }
@@ -5585,15 +5916,19 @@ func (*UtxoRecordDetail) Descriptor() ([]byte, []int) {
 func (m *UtxoRecordDetail) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoRecordDetail.Unmarshal(m, b)
 }
+
 func (m *UtxoRecordDetail) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoRecordDetail.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoRecordDetail) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoRecordDetail.Merge(m, src)
 }
+
 func (m *UtxoRecordDetail) XXX_Size() int {
 	return xxx_messageInfo_UtxoRecordDetail.Size(m)
 }
+
 func (m *UtxoRecordDetail) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoRecordDetail.DiscardUnknown(m)
 }
@@ -5668,15 +6003,19 @@ func (*UtxoRecord) Descriptor() ([]byte, []int) {
 func (m *UtxoRecord) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoRecord.Unmarshal(m, b)
 }
+
 func (m *UtxoRecord) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoRecord.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoRecord) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoRecord.Merge(m, src)
 }
+
 func (m *UtxoRecord) XXX_Size() int {
 	return xxx_messageInfo_UtxoRecord.Size(m)
 }
+
 func (m *UtxoRecord) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoRecord.DiscardUnknown(m)
 }
@@ -5723,15 +6062,19 @@ func (*UtxoKey) Descriptor() ([]byte, []int) {
 func (m *UtxoKey) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UtxoKey.Unmarshal(m, b)
 }
+
 func (m *UtxoKey) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UtxoKey.Marshal(b, m, deterministic)
 }
+
 func (m *UtxoKey) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_UtxoKey.Merge(m, src)
 }
+
 func (m *UtxoKey) XXX_Size() int {
 	return xxx_messageInfo_UtxoKey.Size(m)
 }
+
 func (m *UtxoKey) XXX_DiscardUnknown() {
 	xxx_messageInfo_UtxoKey.DiscardUnknown(m)
 }
@@ -5777,15 +6120,19 @@ func (*ContractStatDataRequest) Descriptor() ([]byte, []int) {
 func (m *ContractStatDataRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractStatDataRequest.Unmarshal(m, b)
 }
+
 func (m *ContractStatDataRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractStatDataRequest.Marshal(b, m, deterministic)
 }
+
 func (m *ContractStatDataRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractStatDataRequest.Merge(m, src)
 }
+
 func (m *ContractStatDataRequest) XXX_Size() int {
 	return xxx_messageInfo_ContractStatDataRequest.Size(m)
 }
+
 func (m *ContractStatDataRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractStatDataRequest.DiscardUnknown(m)
 }
@@ -5825,15 +6172,19 @@ func (*ContractStatDataResponse) Descriptor() ([]byte, []int) {
 func (m *ContractStatDataResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractStatDataResponse.Unmarshal(m, b)
 }
+
 func (m *ContractStatDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractStatDataResponse.Marshal(b, m, deterministic)
 }
+
 func (m *ContractStatDataResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractStatDataResponse.Merge(m, src)
 }
+
 func (m *ContractStatDataResponse) XXX_Size() int {
 	return xxx_messageInfo_ContractStatDataResponse.Size(m)
 }
+
 func (m *ContractStatDataResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractStatDataResponse.DiscardUnknown(m)
 }
@@ -5879,15 +6230,19 @@ func (*ContractStatData) Descriptor() ([]byte, []int) {
 func (m *ContractStatData) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractStatData.Unmarshal(m, b)
 }
+
 func (m *ContractStatData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractStatData.Marshal(b, m, deterministic)
 }
+
 func (m *ContractStatData) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractStatData.Merge(m, src)
 }
+
 func (m *ContractStatData) XXX_Size() int {
 	return xxx_messageInfo_ContractStatData.Size(m)
 }
+
 func (m *ContractStatData) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractStatData.DiscardUnknown(m)
 }
@@ -5929,15 +6284,19 @@ func (*AddressContractsRequest) Descriptor() ([]byte, []int) {
 func (m *AddressContractsRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddressContractsRequest.Unmarshal(m, b)
 }
+
 func (m *AddressContractsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AddressContractsRequest.Marshal(b, m, deterministic)
 }
+
 func (m *AddressContractsRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AddressContractsRequest.Merge(m, src)
 }
+
 func (m *AddressContractsRequest) XXX_Size() int {
 	return xxx_messageInfo_AddressContractsRequest.Size(m)
 }
+
 func (m *AddressContractsRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_AddressContractsRequest.DiscardUnknown(m)
 }
@@ -5989,15 +6348,19 @@ func (*ContractList) Descriptor() ([]byte, []int) {
 func (m *ContractList) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractList.Unmarshal(m, b)
 }
+
 func (m *ContractList) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractList.Marshal(b, m, deterministic)
 }
+
 func (m *ContractList) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractList.Merge(m, src)
 }
+
 func (m *ContractList) XXX_Size() int {
 	return xxx_messageInfo_ContractList.Size(m)
 }
+
 func (m *ContractList) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractList.DiscardUnknown(m)
 }
@@ -6030,15 +6393,19 @@ func (*AddressContractsResponse) Descriptor() ([]byte, []int) {
 func (m *AddressContractsResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddressContractsResponse.Unmarshal(m, b)
 }
+
 func (m *AddressContractsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AddressContractsResponse.Marshal(b, m, deterministic)
 }
+
 func (m *AddressContractsResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_AddressContractsResponse.Merge(m, src)
 }
+
 func (m *AddressContractsResponse) XXX_Size() int {
 	return xxx_messageInfo_AddressContractsResponse.Size(m)
 }
+
 func (m *AddressContractsResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_AddressContractsResponse.DiscardUnknown(m)
 }
@@ -6080,15 +6447,19 @@ func (*CrossQueryRequest) Descriptor() ([]byte, []int) {
 func (m *CrossQueryRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossQueryRequest.Unmarshal(m, b)
 }
+
 func (m *CrossQueryRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossQueryRequest.Marshal(b, m, deterministic)
 }
+
 func (m *CrossQueryRequest) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossQueryRequest.Merge(m, src)
 }
+
 func (m *CrossQueryRequest) XXX_Size() int {
 	return xxx_messageInfo_CrossQueryRequest.Size(m)
 }
+
 func (m *CrossQueryRequest) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossQueryRequest.DiscardUnknown(m)
 }
@@ -6147,15 +6518,19 @@ func (*CrossQueryResponse) Descriptor() ([]byte, []int) {
 func (m *CrossQueryResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossQueryResponse.Unmarshal(m, b)
 }
+
 func (m *CrossQueryResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossQueryResponse.Marshal(b, m, deterministic)
 }
+
 func (m *CrossQueryResponse) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossQueryResponse.Merge(m, src)
 }
+
 func (m *CrossQueryResponse) XXX_Size() int {
 	return xxx_messageInfo_CrossQueryResponse.Size(m)
 }
+
 func (m *CrossQueryResponse) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossQueryResponse.DiscardUnknown(m)
 }
@@ -6187,15 +6562,19 @@ func (*CrossChainMeta) Descriptor() ([]byte, []int) {
 func (m *CrossChainMeta) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossChainMeta.Unmarshal(m, b)
 }
+
 func (m *CrossChainMeta) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossChainMeta.Marshal(b, m, deterministic)
 }
+
 func (m *CrossChainMeta) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossChainMeta.Merge(m, src)
 }
+
 func (m *CrossChainMeta) XXX_Size() int {
 	return xxx_messageInfo_CrossChainMeta.Size(m)
 }
+
 func (m *CrossChainMeta) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossChainMeta.DiscardUnknown(m)
 }
@@ -6236,15 +6615,19 @@ func (*CrossEndorsor) Descriptor() ([]byte, []int) {
 func (m *CrossEndorsor) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossEndorsor.Unmarshal(m, b)
 }
+
 func (m *CrossEndorsor) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossEndorsor.Marshal(b, m, deterministic)
 }
+
 func (m *CrossEndorsor) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossEndorsor.Merge(m, src)
 }
+
 func (m *CrossEndorsor) XXX_Size() int {
 	return xxx_messageInfo_CrossEndorsor.Size(m)
 }
+
 func (m *CrossEndorsor) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossEndorsor.DiscardUnknown(m)
 }
@@ -6290,15 +6673,19 @@ func (*CrossQueryMeta) Descriptor() ([]byte, []int) {
 func (m *CrossQueryMeta) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossQueryMeta.Unmarshal(m, b)
 }
+
 func (m *CrossQueryMeta) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossQueryMeta.Marshal(b, m, deterministic)
 }
+
 func (m *CrossQueryMeta) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossQueryMeta.Merge(m, src)
 }
+
 func (m *CrossQueryMeta) XXX_Size() int {
 	return xxx_messageInfo_CrossQueryMeta.Size(m)
 }
+
 func (m *CrossQueryMeta) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossQueryMeta.DiscardUnknown(m)
 }
@@ -6338,15 +6725,19 @@ func (*CrossQueryInfo) Descriptor() ([]byte, []int) {
 func (m *CrossQueryInfo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CrossQueryInfo.Unmarshal(m, b)
 }
+
 func (m *CrossQueryInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_CrossQueryInfo.Marshal(b, m, deterministic)
 }
+
 func (m *CrossQueryInfo) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_CrossQueryInfo.Merge(m, src)
 }
+
 func (m *CrossQueryInfo) XXX_Size() int {
 	return xxx_messageInfo_CrossQueryInfo.Size(m)
 }
+
 func (m *CrossQueryInfo) XXX_DiscardUnknown() {
 	xxx_messageInfo_CrossQueryInfo.DiscardUnknown(m)
 }
@@ -6393,15 +6784,19 @@ func (*ContractEvent) Descriptor() ([]byte, []int) {
 func (m *ContractEvent) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ContractEvent.Unmarshal(m, b)
 }
+
 func (m *ContractEvent) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_ContractEvent.Marshal(b, m, deterministic)
 }
+
 func (m *ContractEvent) XXX_Merge(src proto.Message) {
 	xxx_messageInfo_ContractEvent.Merge(m, src)
 }
+
 func (m *ContractEvent) XXX_Size() int {
 	return xxx_messageInfo_ContractEvent.Size(m)
 }
+
 func (m *ContractEvent) XXX_DiscardUnknown() {
 	xxx_messageInfo_ContractEvent.DiscardUnknown(m)
 }
@@ -6930,8 +7325,10 @@ var fileDescriptor_db0991b9525664ca = []byte{
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ context.Context
-var _ grpc.ClientConnInterface
+var (
+	_ context.Context
+	_ grpc.ClientConnInterface
+)
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
@@ -6999,7 +7396,7 @@ type XchainClient interface {
 	GetAccountByAK(ctx context.Context, in *AK2AccountRequest, opts ...grpc.CallOption) (*AK2AccountResponse, error)
 	// GetAddressContracts get contracts of accounts contain a specific address
 	GetAddressContracts(ctx context.Context, in *AddressContractsRequest, opts ...grpc.CallOption) (*AddressContractsResponse, error)
-	//预执行合约
+	// 预执行合约
 	PreExec(ctx context.Context, in *InvokeRPCRequest, opts ...grpc.CallOption) (*InvokeRPCResponse, error)
 }
 
@@ -7332,98 +7729,125 @@ type XchainServer interface {
 	GetAccountByAK(context.Context, *AK2AccountRequest) (*AK2AccountResponse, error)
 	// GetAddressContracts get contracts of accounts contain a specific address
 	GetAddressContracts(context.Context, *AddressContractsRequest) (*AddressContractsResponse, error)
-	//预执行合约
+	// 预执行合约
 	PreExec(context.Context, *InvokeRPCRequest) (*InvokeRPCResponse, error)
 }
 
 // UnimplementedXchainServer can be embedded to have forward compatible implementations.
-type UnimplementedXchainServer struct {
-}
+type UnimplementedXchainServer struct{}
 
 func (*UnimplementedXchainServer) SelectUTXOBySize(ctx context.Context, req *UtxoInput) (*UtxoOutput, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SelectUTXOBySize not implemented")
 }
+
 func (*UnimplementedXchainServer) PostTx(ctx context.Context, req *TxStatus) (*CommonReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PostTx not implemented")
 }
+
 func (*UnimplementedXchainServer) QueryACL(ctx context.Context, req *AclStatus) (*AclStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryACL not implemented")
 }
+
 func (*UnimplementedXchainServer) QueryUtxoRecord(ctx context.Context, req *UtxoRecordDetail) (*UtxoRecordDetail, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryUtxoRecord not implemented")
 }
+
 func (*UnimplementedXchainServer) QueryContractStatData(ctx context.Context, req *ContractStatDataRequest) (*ContractStatDataResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryContractStatData not implemented")
 }
+
 func (*UnimplementedXchainServer) GetAccountContracts(ctx context.Context, req *GetAccountContractsRequest) (*GetAccountContractsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAccountContracts not implemented")
 }
+
 func (*UnimplementedXchainServer) QueryTx(ctx context.Context, req *TxStatus) (*TxStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method QueryTx not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBalance(ctx context.Context, req *AddressStatus) (*AddressStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBalance not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBalanceDetail(ctx context.Context, req *AddressBalanceStatus) (*AddressBalanceStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBalanceDetail not implemented")
 }
+
 func (*UnimplementedXchainServer) GetFrozenBalance(ctx context.Context, req *AddressStatus) (*AddressStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFrozenBalance not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBlock(ctx context.Context, req *BlockID) (*Block, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlock not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBlockByHeight(ctx context.Context, req *BlockHeight) (*Block, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlockByHeight not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBlockChainStatus(ctx context.Context, req *BCStatus) (*BCStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlockChainStatus not implemented")
 }
+
 func (*UnimplementedXchainServer) GetBlockChains(ctx context.Context, req *CommonIn) (*BlockChains, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBlockChains not implemented")
 }
+
 func (*UnimplementedXchainServer) GetSystemStatus(ctx context.Context, req *CommonIn) (*SystemsStatusReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetSystemStatus not implemented")
 }
+
 func (*UnimplementedXchainServer) GetConsensusStatus(ctx context.Context, req *ConsensusStatRequest) (*ConsensusStatus, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConsensusStatus not implemented")
 }
+
 func (*UnimplementedXchainServer) GetNetURL(ctx context.Context, req *CommonIn) (*RawUrl, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetNetURL not implemented")
 }
+
 func (*UnimplementedXchainServer) SelectUTXO(ctx context.Context, req *UtxoInput) (*UtxoOutput, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SelectUTXO not implemented")
 }
+
 func (*UnimplementedXchainServer) PreExecWithSelectUTXO(ctx context.Context, req *PreExecWithSelectUTXORequest) (*PreExecWithSelectUTXOResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PreExecWithSelectUTXO not implemented")
 }
+
 func (*UnimplementedXchainServer) DposCandidates(ctx context.Context, req *DposCandidatesRequest) (*DposCandidatesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposCandidates not implemented")
 }
+
 func (*UnimplementedXchainServer) DposNominateRecords(ctx context.Context, req *DposNominateRecordsRequest) (*DposNominateRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposNominateRecords not implemented")
 }
+
 func (*UnimplementedXchainServer) DposNomineeRecords(ctx context.Context, req *DposNomineeRecordsRequest) (*DposNomineeRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposNomineeRecords not implemented")
 }
+
 func (*UnimplementedXchainServer) DposVoteRecords(ctx context.Context, req *DposVoteRecordsRequest) (*DposVoteRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposVoteRecords not implemented")
 }
+
 func (*UnimplementedXchainServer) DposVotedRecords(ctx context.Context, req *DposVotedRecordsRequest) (*DposVotedRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposVotedRecords not implemented")
 }
+
 func (*UnimplementedXchainServer) DposCheckResults(ctx context.Context, req *DposCheckResultsRequest) (*DposCheckResultsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposCheckResults not implemented")
 }
+
 func (*UnimplementedXchainServer) DposStatus(ctx context.Context, req *DposStatusRequest) (*DposStatusResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DposStatus not implemented")
 }
+
 func (*UnimplementedXchainServer) GetAccountByAK(ctx context.Context, req *AK2AccountRequest) (*AK2AccountResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAccountByAK not implemented")
 }
+
 func (*UnimplementedXchainServer) GetAddressContracts(ctx context.Context, req *AddressContractsRequest) (*AddressContractsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAddressContracts not implemented")
 }
+
 func (*UnimplementedXchainServer) PreExec(ctx context.Context, req *InvokeRPCRequest) (*InvokeRPCResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PreExec not implemented")
 }

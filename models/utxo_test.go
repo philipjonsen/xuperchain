@@ -7,7 +7,6 @@ import (
 )
 
 func TestLockedUtxo_Hash(t *testing.T) {
-
 	type fields struct {
 		bcName  string
 		address string

@@ -247,7 +247,6 @@ func TestAK_SignTx(t *testing.T) {
 		want    *pb.SignatureInfo
 		wantErr bool
 	}{
-
 		{
 			name:   "valid AK",
 			fields: fields{path: filepath.Join(validAKDir, "keys")},
@@ -441,8 +440,7 @@ func TestKeyPair_SignUtxo(t *testing.T) {
 	}
 }
 
-type mockCryptoClient struct {
-}
+type mockCryptoClient struct{}
 
 func (m mockCryptoClient) GenerateKeyBySeed(_ []byte) (*ecdsa.PrivateKey, error) {
 	panic("implement me")

@@ -118,7 +118,7 @@ func TestEndorserCall(t *testing.T) {
 	}
 	resp, err = endor.EndorserCall(ctx, xreq)
 	if err != nil {
-		//pass
+		// pass
 		t.Log(err)
 	}
 	t.Log(resp)

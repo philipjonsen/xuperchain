@@ -54,7 +54,6 @@ func newEndorserService(cfg *sconf.ServConf, engine ecom.Engine, svr XEndorserSe
 	default:
 		return nil, fmt.Errorf("unknown endorser module")
 	}
-
 }
 
 func (pxe *ProxyXEndorser) EndorserCall(gctx context.Context, req *pb.EndorserRequest) (*pb.EndorserResponse, error) {
@@ -219,8 +218,8 @@ func (dxe *DefaultXEndorser) EndorserCall(ctx context.Context, req *pb.EndorserR
 
 // genSignedResp generate response signed by endorser
 func (dxe *DefaultXEndorser) genSignedResp(ctx context.Context, req *pb.EndorserRequest, err error,
-	resHeader *pb.Header, resData []byte) (*pb.EndorserResponse, error) {
-
+	resHeader *pb.Header, resData []byte,
+) (*pb.EndorserResponse, error) {
 	// failed response for origin request error
 	if err != nil {
 		return dxe.generateErrorResponse(req, resHeader, err)
@@ -396,7 +395,8 @@ func (dxe *DefaultXEndorser) signData(ctx context.Context, data []byte, keypath 
 }
 
 func (dxe *DefaultXEndorser) generateErrorResponse(req *pb.EndorserRequest, header *pb.Header,
-	err error) (*pb.EndorserResponse, error) {
+	err error,
+) (*pb.EndorserResponse, error) {
 	res := &pb.EndorserResponse{
 		Header:       header,
 		ResponseName: req.GetRequestName(),
@@ -405,7 +405,8 @@ func (dxe *DefaultXEndorser) generateErrorResponse(req *pb.EndorserRequest, head
 }
 
 func (dxe *DefaultXEndorser) generateSuccessResponse(req *pb.EndorserRequest, resData []byte,
-	addr []byte, sign *pb.SignatureInfo, header *pb.Header) (*pb.EndorserResponse, error) {
+	addr []byte, sign *pb.SignatureInfo, header *pb.Header,
+) (*pb.EndorserResponse, error) {
 	res := &pb.EndorserResponse{
 		Header:          header,
 		ResponseName:    req.GetRequestName(),
