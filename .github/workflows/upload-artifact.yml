@@ -85,10 +85,10 @@ jobs:
               * Add new feature [#32 ](http://xuper.baidu.com)
               * Fix config file bug [#33](http://xuper.baidu.com)
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: xuperchain-linux-amd64.tar.gz
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: xuperchain-darwin-amd64.tar.gz
 
